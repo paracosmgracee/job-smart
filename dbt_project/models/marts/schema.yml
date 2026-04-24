@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: mart_skill_demand
+    description: Skill demand ranking with salary and seniority breakdown
+    columns:
+      - name: skill_id
+        tests: [not_null, unique]
+      - name: job_count
+        tests: [not_null]
+
+  - name: mart_salary_by_role
+    description: Salary percentiles aggregated by role cluster
+    columns:
+      - name: role_cluster
+        tests: [not_null, unique]
+
+  - name: mart_hiring_trends
+    description: Monthly job posting volume by role cluster

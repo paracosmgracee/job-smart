@@ -101,7 +101,8 @@ roles_df    = q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_ROLE ORDER BY POSTING_
 trends_df   = q(conn, "SELECT * FROM MARTS.MART_HIRING_TRENDS ORDER BY MONTH, ROLE_CLUSTER")
 seniority_df= q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_SENIORITY ORDER BY SORT_ORDER")
 role_sen_df = q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_ROLE_SENIORITY")
-skills_df   = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS ORDER BY DEMAND_RANK")
+skills_df      = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS ORDER BY DEMAND_RANK")
+skills_role_df = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS_BY_ROLE ORDER BY ROLE_CLUSTER, ROLE_RANK")
 geo_df      = q(conn, "SELECT * FROM MARTS.MART_JOBS_BY_LOCATION ORDER BY JOB_COUNT DESC")
 
 # ── Global role filter ─────────────────────────────────────────────────────
@@ -363,13 +364,21 @@ with tab2:
 # TAB 3 — Skills Intelligence
 # ══════════════════════════════════════════════════════════════════════════
 with tab3:
-    section("Technical Skills — Demand × Salary")
+    role_label = sel_role if sel_role != "All Roles" else "All Roles"
+    section(f"Technical Skills — Demand × Salary · {role_label}")
     insight("Top-right quadrant = high demand AND high pay = best ROI to learn. Kubernetes, Kafka, Terraform: niche but premium. SQL/Python: universal baseline, table stakes.")
 
-    if not skills_df.empty:
+    # Use role-specific skills if a role is selected
+    if sel_role != "All Roles" and not skills_role_df.empty:
+        active_skills = skills_role_df[skills_role_df["ROLE_CLUSTER"] == sel_role].copy()
+        active_skills = active_skills.rename(columns={"ROLE_RANK": "DEMAND_RANK"})
+    else:
+        active_skills = skills_df.copy()
+
+    if not active_skills.empty:
         # Scatter: demand vs salary
-        scatter_df = skills_df[skills_df["MEDIAN_SALARY"] > 0].copy()
-        scatter_df["size"] = scatter_df["JOB_COUNT"].apply(lambda x: max(8, min(40, x/100)))
+        scatter_df = active_skills[active_skills["MEDIAN_SALARY"] > 0].copy()
+        scatter_df["size"] = scatter_df["JOB_COUNT"].apply(lambda x: max(8, min(40, x/50)))
         scatter_df["label"] = scatter_df["SKILL"].str.title()
 
         fig = px.scatter(
@@ -397,13 +406,13 @@ with tab3:
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    section("Top 20 Skills — At a Glance")
+    section(f"Top 20 Skills — At a Glance · {role_label}")
     insight("Python and SQL appear in virtually every data role. Cloud platforms (AWS, Azure, GCP) are increasingly required, not optional.")
 
-    if not skills_df.empty:
-        max_count = int(skills_df["JOB_COUNT"].max())
+    if not active_skills.empty:
+        max_count = int(active_skills["JOB_COUNT"].max())
         tiles = '<div class="skill-grid">'
-        for _, row in skills_df.head(20).iterrows():
+        for _, row in active_skills.head(20).iterrows():
             name  = row["SKILL"].title()
             count = int(row["JOB_COUNT"])
             sal   = f"${int(row['MEDIAN_SALARY'])//1000}k" if row["MEDIAN_SALARY"] else "—"
@@ -418,14 +427,18 @@ with tab3:
         st.markdown(tiles, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    section("Salary vs. Demand Ranking Table")
-    if not skills_df.empty:
-        tbl = skills_df[["DEMAND_RANK","SKILL","JOB_COUNT","MEDIAN_SALARY","SENIOR_COUNT"]].copy()
-        tbl.columns = ["Rank","Skill","# Jobs","Median Salary","Senior Jobs"]
-        tbl["Skill"]          = tbl["Skill"].str.title()
-        tbl["Median Salary"]  = tbl["Median Salary"].apply(lambda x: f"${int(x):,}" if pd.notna(x) and x > 0 else "—")
-        tbl["# Jobs"]         = tbl["# Jobs"].apply(lambda x: f"{int(x):,}")
-        tbl["Senior Jobs"]    = tbl["Senior Jobs"].apply(lambda x: f"{int(x):,}" if pd.notna(x) else "—")
+    section("Full Ranking Table")
+    if not active_skills.empty:
+        cols = ["DEMAND_RANK","SKILL","JOB_COUNT","MEDIAN_SALARY"]
+        if "SENIOR_COUNT" in active_skills.columns:
+            cols.append("SENIOR_COUNT")
+        tbl = active_skills[cols].copy()
+        tbl.columns = ["Rank","Skill","# Jobs","Median Salary"] + (["Senior Jobs"] if "SENIOR_COUNT" in cols else [])
+        tbl["Skill"]         = tbl["Skill"].str.title()
+        tbl["Median Salary"] = tbl["Median Salary"].apply(lambda x: f"${int(x):,}" if pd.notna(x) and x > 0 else "—")
+        tbl["# Jobs"]        = tbl["# Jobs"].apply(lambda x: f"{int(x):,}")
+        if "Senior Jobs" in tbl.columns:
+            tbl["Senior Jobs"] = tbl["Senior Jobs"].apply(lambda x: f"{int(x):,}" if pd.notna(x) else "—")
         st.dataframe(tbl, use_container_width=True, hide_index=True)
 
 

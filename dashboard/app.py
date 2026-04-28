@@ -127,7 +127,7 @@ conn = get_conn()
 
 # ── Load data ──────────────────────────────────────────────────────────────
 postings_raw = q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_ROLE")
-skills_df    = q(conn, "SELECT * FROM MARTS.MART_SKILL_DEMAND ORDER BY DEMAND_RANK LIMIT 30")
+skills_df    = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS ORDER BY DEMAND_RANK LIMIT 30")
 trends_df    = q(conn, "SELECT * FROM MARTS.MART_HIRING_TRENDS ORDER BY MONTH, ROLE_CLUSTER")
 seniority_df = q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_SENIORITY ORDER BY SORT_ORDER")
 remote_df    = q(conn, "SELECT * FROM MARTS.MART_REMOTE_TREND ORDER BY MONTH")
@@ -159,7 +159,7 @@ postings_df = postings_raw[postings_raw["ROLE_CLUSTER"].isin(sel_roles)] if sel_
 total_listings   = int(postings_df["POSTING_COUNT"].sum()) if not postings_df.empty else 0
 median_salary    = int(postings_df["MEDIAN_SALARY"].median()) if not postings_df.empty else 0
 remote_pct       = int(remote_df["REMOTE_PCT"].mean()) if not remote_df.empty else 0
-unique_skills    = len(skills_df)
+unique_skills    = int(q(conn, "SELECT COUNT(*) FROM MARTS.MART_TECH_SKILLS").iloc[0,0])
 top_role         = postings_df.sort_values("POSTING_COUNT", ascending=False).iloc[0]["ROLE_CLUSTER"] if not postings_df.empty else "-"
 top_paying_role  = postings_df.sort_values("MEDIAN_SALARY", ascending=False).iloc[0]["ROLE_CLUSTER"] if not postings_df.empty else "-"
 top_paying_sal   = int(postings_df.sort_values("MEDIAN_SALARY", ascending=False).iloc[0]["MEDIAN_SALARY"]) if not postings_df.empty else 0
@@ -302,15 +302,14 @@ SKILL_NAMES = {
     "med":   "Medical",                "art":   "Arts & Media",
 }
 
-st.markdown('<div class="section-label">Top 20 In-Demand Job Functions</div>', unsafe_allow_html=True)
-st.markdown('<div class="section-insight">IT and Sales dominate by volume. Engineering and Consulting command the highest salaries. Analytics and Project Management are the fastest-growing.</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-label">Top 20 In-Demand Technical Skills</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-insight">Python & SQL are universal baselines. Kubernetes, Kafka and Terraform command the highest salaries ($150k+). LLM tooling is the fastest-rising entrant in 2024-2025.</div>', unsafe_allow_html=True)
 
 if not skills_df.empty:
     max_count = int(skills_df["JOB_COUNT"].max())
     tiles_html = '<div class="skill-grid">'
     for _, row in skills_df.head(20).iterrows():
-        abbr = row["SKILL_ID"].lower()
-        display_name = SKILL_NAMES.get(abbr, row["SKILL_ID"].upper())
+        display_name = row["SKILL"].title()
         pct = int(row["JOB_COUNT"] / max_count * 100)
         sal = f"${int(row['MEDIAN_SALARY'])//1000}k" if row["MEDIAN_SALARY"] else "—"
         tiles_html += f"""
@@ -428,7 +427,7 @@ with st.expander("🤖 AI Resume Analyzer — Paste your resume to get skill gap
     if st.button("Analyze Match →", type="primary") and resume_text and jd_text:
         try:
             from ai.resume_analyzer import extract_skills_from_resume, extract_skills_from_jd, skill_gap_analysis
-            market_skills = skills_df["SKILL_ID"].head(20).tolist()
+            market_skills = skills_df["SKILL"].head(20).tolist() if "SKILL" in skills_df.columns else []
             with st.spinner("Analyzing with Claude..."):
                 resume_profile = extract_skills_from_resume(resume_text)
                 jd_profile = extract_skills_from_jd(jd_text)

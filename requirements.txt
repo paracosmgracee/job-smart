@@ -1,11 +1,6 @@
-apache-airflow==2.8.1
-snowflake-connector-python[pandas]
-snowflake-sqlalchemy
-dbt-snowflake
-pandas
-anthropic
 streamlit
 plotly
+pandas
+snowflake-connector-python[pandas]
 python-dotenv
-kaggle
-pinecone-client
+anthropic

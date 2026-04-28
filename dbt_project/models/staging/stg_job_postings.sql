@@ -10,17 +10,17 @@ cleaned as (
         trim(TITLE)                                          as job_title,
         trim(DESCRIPTION)                                    as description,
         trim(LOCATION)                                       as location,
-        try_cast(MIN_SALARY as float)                        as min_salary,
-        try_cast(MAX_SALARY as float)                        as max_salary,
-        try_cast(MED_SALARY as float)                        as med_salary,
+        MIN_SALARY::float                                    as min_salary,
+        MAX_SALARY::float                                    as max_salary,
+        MED_SALARY::float                                    as med_salary,
         upper(trim(PAY_PERIOD))                              as pay_period,   -- HOURLY / MONTHLY / YEARLY
         upper(trim(FORMATTED_WORK_TYPE))                     as work_type,    -- Full-time / Part-time / Contract
         upper(trim(REMOTE_ALLOWED))                          as remote_allowed,
-        try_cast(VIEWS as int)                               as views,
-        try_cast(APPLIES as int)                             as applies,
-        try_cast(FORMATTED_EXPERIENCE_LEVEL as varchar)      as experience_level,
-        try_to_timestamp(LISTED_TIME / 1000)                 as listed_at,
-        try_to_timestamp(EXPIRY as varchar)                  as expires_at,
+        VIEWS::int                                           as views,
+        APPLIES::int                                         as applies,
+        FORMATTED_EXPERIENCE_LEVEL::varchar                  as experience_level,
+        try_to_timestamp(ORIGINAL_LISTED_TIME::varchar)       as listed_at,
+        try_to_timestamp(EXPIRY::varchar)                    as expires_at,
         -- normalize salary to annual
         case pay_period
             when 'HOURLY'   then med_salary * 2080

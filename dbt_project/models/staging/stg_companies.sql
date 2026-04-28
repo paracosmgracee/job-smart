@@ -9,9 +9,8 @@ select
     trim(COMPANY_SIZE)       as company_size,
     trim(STATE)              as state,
     trim(COUNTRY)            as country,
+    trim(CITY)               as city,
     trim(URL)                as website_url,
-    try_cast(FOLLOWER_COUNT as int) as follower_count,
-    try_cast(EMPLOYEE_COUNT as int) as employee_count,
     current_timestamp()      as _loaded_at
 from source
 where COMPANY_ID is not null

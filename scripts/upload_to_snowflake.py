@@ -13,10 +13,13 @@ load_dotenv()
 
 RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
 
+# Actual file paths from the Kaggle dataset structure
 TABLES = {
-    "job_postings.csv": "JOB_POSTINGS",
-    "skills.csv": "JOB_SKILLS",
-    "companies.csv": "COMPANIES",
+    "postings.csv": "JOB_POSTINGS",
+    "jobs/job_skills.csv": "JOB_SKILLS",
+    "companies/companies.csv": "COMPANIES",
+    "jobs/salaries.csv": "JOB_SALARIES",
+    "jobs/job_industries.csv": "JOB_INDUSTRIES",
 }
 
 # Column normalization — Snowflake prefers UPPER_SNAKE

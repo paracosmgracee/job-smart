@@ -284,18 +284,38 @@ with col_r:
         st.plotly_chart(fig_grouped, use_container_width=True)
 
 # ── Section: Top Skills ────────────────────────────────────────────────────
-st.markdown('<div class="section-label">Top 20 In-Demand Skills</div>', unsafe_allow_html=True)
-st.markdown('<div class="section-insight">Python & SQL are universal baselines. Cloud platforms (AWS, GCP, Azure) and LLM tooling are the fastest-rising entrants in 2024-2025 AI hiring.</div>', unsafe_allow_html=True)
+SKILL_NAMES = {
+    "it":    "Information Technology", "sale":  "Sales",
+    "mgmt":  "Management",             "mnfc":  "Manufacturing",
+    "hcpr":  "Healthcare",             "bd":    "Business Development",
+    "eng":   "Engineering",            "othr":  "Other",
+    "fin":   "Finance",                "mrkt":  "Marketing",
+    "acct":  "Accounting",             "adm":   "Administration",
+    "cust":  "Customer Service",       "prjm":  "Project Management",
+    "anls":  "Analytics",              "rsch":  "Research",
+    "hr":    "Human Resources",        "lgl":   "Legal",
+    "cnsl":  "Consulting",             "edu":   "Education",
+    "tech":  "Technology",             "ops":   "Operations",
+    "dsgn":  "Design",                 "pr":    "Public Relations",
+    "prdm":  "Product Management",     "qal":   "Quality Assurance",
+    "supl":  "Supply Chain",           "real":  "Real Estate",
+    "med":   "Medical",                "art":   "Arts & Media",
+}
+
+st.markdown('<div class="section-label">Top 20 In-Demand Job Functions</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-insight">IT and Sales dominate by volume. Engineering and Consulting command the highest salaries. Analytics and Project Management are the fastest-growing.</div>', unsafe_allow_html=True)
 
 if not skills_df.empty:
     max_count = int(skills_df["JOB_COUNT"].max())
     tiles_html = '<div class="skill-grid">'
     for _, row in skills_df.head(20).iterrows():
+        abbr = row["SKILL_ID"].lower()
+        display_name = SKILL_NAMES.get(abbr, row["SKILL_ID"].upper())
         pct = int(row["JOB_COUNT"] / max_count * 100)
         sal = f"${int(row['MEDIAN_SALARY'])//1000}k" if row["MEDIAN_SALARY"] else "—"
         tiles_html += f"""
         <div class="skill-tile">
-          <div class="skill-name">{row['SKILL_ID'].upper()}</div>
+          <div class="skill-name">{display_name}</div>
           <div class="skill-count">{int(row['JOB_COUNT']):,} jobs · {sal}</div>
           <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:{pct}%"></div></div>
         </div>"""

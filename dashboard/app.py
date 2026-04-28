@@ -415,7 +415,7 @@ with tab3:
         for _, row in active_skills.head(20).iterrows():
             name  = row["SKILL"].title()
             count = int(row["JOB_COUNT"])
-            sal   = f"${int(row['MEDIAN_SALARY'])//1000}k" if row["MEDIAN_SALARY"] else "—"
+            sal   = f"${int(row['MEDIAN_SALARY'])//1000}k" if pd.notna(row["MEDIAN_SALARY"]) and row["MEDIAN_SALARY"] > 0 else "—"
             pct   = int(count / max_count * 100)
             rank  = int(row["DEMAND_RANK"])
             tiles += f"""<div class="skill-tile">

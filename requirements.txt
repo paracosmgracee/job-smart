@@ -1,6 +1,7 @@
 streamlit
 plotly
 pandas
-snowflake-connector-python[pandas]
+snowflake-connector-python[pandas]==3.6.0
+pyarrow
 python-dotenv
 anthropic

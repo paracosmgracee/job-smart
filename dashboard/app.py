@@ -104,14 +104,45 @@ role_sen_df = q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_ROLE_SENIORITY")
 skills_df   = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS ORDER BY DEMAND_RANK")
 geo_df      = q(conn, "SELECT * FROM MARTS.MART_JOBS_BY_LOCATION ORDER BY JOB_COUNT DESC")
 
-# ── Global KPIs ────────────────────────────────────────────────────────────
-total      = int(roles_df["POSTING_COUNT"].sum()) if not roles_df.empty else 0
-med_sal    = int(roles_df["MEDIAN_SALARY"].median()) if not roles_df.empty else 0
-top_role   = roles_df.iloc[0]["ROLE_CLUSTER"] if not roles_df.empty else "-"
-top_pay    = roles_df.sort_values("MEDIAN_SALARY", ascending=False).iloc[0]["ROLE_CLUSTER"] if not roles_df.empty else "-"
-top_pay_sal= int(roles_df.sort_values("MEDIAN_SALARY", ascending=False).iloc[0]["MEDIAN_SALARY"]) if not roles_df.empty else 0
+# ── Global role filter ─────────────────────────────────────────────────────
+all_roles   = sorted(roles_df["ROLE_CLUSTER"].dropna().unique().tolist()) if not roles_df.empty else []
+role_options = ["All Roles"] + all_roles
+
+# Role selector in a compact row
+fcol1, fcol2 = st.columns([2, 5])
+with fcol1:
+    sel_role = st.selectbox(
+        "Filter by role",
+        role_options,
+        index=0,
+        label_visibility="collapsed",
+    )
+
+# Apply filter to all relevant dataframes
+if sel_role == "All Roles":
+    roles_f     = roles_df.copy()
+    trends_f    = trends_df.copy()
+    role_sen_f  = role_sen_df.copy()
+    geo_col     = "JOB_COUNT"
+else:
+    roles_f     = roles_df[roles_df["ROLE_CLUSTER"] == sel_role]
+    trends_f    = trends_df[trends_df["ROLE_CLUSTER"] == sel_role]
+    role_sen_f  = role_sen_df[role_sen_df["ROLE_CLUSTER"] == sel_role]
+    col_map     = {
+        "Data Engineer": "DE_COUNT", "Data Scientist": "DS_COUNT",
+        "Data Analyst": "DA_COUNT", "Software Engineer": "SWE_COUNT",
+        "ML Engineer": "ML_COUNT",
+    }
+    geo_col = col_map.get(sel_role, "JOB_COUNT")
+
+# ── Global KPIs (filtered) ──────────────────────────────────────────────────
+total      = int(roles_f["POSTING_COUNT"].sum()) if not roles_f.empty else 0
+med_sal    = int(roles_f["MEDIAN_SALARY"].median()) if not roles_f.empty else 0
+top_role   = roles_f.iloc[0]["ROLE_CLUSTER"] if not roles_f.empty else "-"
+top_pay    = roles_f.sort_values("MEDIAN_SALARY", ascending=False).iloc[0]["ROLE_CLUSTER"] if not roles_f.empty else "-"
+top_pay_sal= int(roles_f.sort_values("MEDIAN_SALARY", ascending=False).iloc[0]["MEDIAN_SALARY"]) if not roles_f.empty else 0
 n_skills   = len(skills_df)
-last_run   = str(trends_df["MONTH"].max())[:7] if not trends_df.empty else "-"
+last_run   = str(trends_df["MONTH"].max())[:7] if not trends_f.empty else "-"
 
 # ── Top bar ────────────────────────────────────────────────────────────────
 st.markdown(f"""
@@ -144,7 +175,7 @@ with tab1:
     # KPI cards
     c1,c2,c3,c4 = st.columns(4)
     cards = [
-        (c1,"🏆","Top Role by Volume",top_role,f"{int(roles_df.iloc[0]['POSTING_COUNT']):,} postings","bg"),
+        (c1,"🏆","Top Role by Volume",top_role,f"{int(roles_f.iloc[0]['POSTING_COUNT']):,} postings","bg"),
         (c2,"💵","Median Salary",f"${med_sal//1000}k","across all roles","bb"),
         (c3,"⚡","Highest Paying",top_pay,f"${top_pay_sal//1000}k median","bp"),
         (c4,"🔧","Skills Tracked",str(n_skills),"technical skills indexed","bo"),
@@ -165,9 +196,9 @@ with tab1:
     col_l, col_r = st.columns([1, 1])
 
     with col_l:
-        if not roles_df.empty:
+        if not roles_f.empty:
             fig = px.bar(
-                roles_df.sort_values("POSTING_COUNT"),
+                roles_f.sort_values("POSTING_COUNT"),
                 x="POSTING_COUNT", y="ROLE_CLUSTER",
                 orientation="h",
                 color="MEDIAN_SALARY",
@@ -181,9 +212,9 @@ with tab1:
             st.plotly_chart(fig, use_container_width=True)
 
     with col_r:
-        if not trends_df.empty:
+        if not trends_f.empty:
             fig = px.line(
-                trends_df, x="MONTH", y="POSTING_COUNT", color="ROLE_CLUSTER",
+                trends_f, x="MONTH", y="POSTING_COUNT", color="ROLE_CLUSTER",
                 color_discrete_sequence=PALETTE,
                 title="Hiring Volume Over Time",
                 labels={"MONTH":"","POSTING_COUNT":"Postings","ROLE_CLUSTER":""},
@@ -207,12 +238,12 @@ with tab1:
                 geo_df,
                 locations="STATE_CODE",
                 locationmode="USA-states",
-                color="JOB_COUNT",
+                color=geo_col,
                 scope="usa",
                 color_continuous_scale=[[0,"#1a1d27"],[0.3,"#1a3d5c"],[1,"#00d4aa"]],
-                hover_data={"JOB_COUNT":True,"MEDIAN_SALARY":True},
-                title="Job Postings by State",
-                labels={"JOB_COUNT":"Postings","MEDIAN_SALARY":"Median Salary"},
+                hover_data={geo_col:True,"MEDIAN_SALARY":True},
+                title=f"Job Postings by State — {sel_role}",
+                labels={geo_col:"Postings","MEDIAN_SALARY":"Median Salary"},
             )
             fig_map.update_layout(
                 geo=dict(bgcolor="rgba(0,0,0,0)", lakecolor="rgba(0,0,0,0)"),
@@ -223,7 +254,7 @@ with tab1:
 
         with col_top:
             st.markdown("**Top 10 States**")
-            top10 = geo_df.head(10)[["STATE_CODE","JOB_COUNT","MEDIAN_SALARY"]].copy()
+            top10 = geo_df.sort_values(geo_col, ascending=False).head(10)[["STATE_CODE", geo_col,"MEDIAN_SALARY"]].copy()
             top10.columns = ["State","Jobs","Median Salary"]
             top10["Median Salary"] = top10["Median Salary"].apply(
                 lambda x: f"${int(x)//1000}k" if pd.notna(x) and x > 0 else "—"
@@ -243,8 +274,8 @@ with tab2:
     all_sen = ["Entry Level","Mid Level","Senior","Staff/Lead","Principal"]
     sel_sen = st.multiselect("Filter seniority", all_sen, default=all_sen, label_visibility="collapsed")
 
-    if not role_sen_df.empty:
-        filtered = role_sen_df[role_sen_df["SENIORITY"].isin(sel_sen)] if sel_sen else role_sen_df
+    if not role_sen_f.empty:
+        filtered = role_sen_f[role_sen_f["SENIORITY"].isin(sel_sen)] if sel_sen else role_sen_df
         fig = px.bar(
             filtered, x="ROLE_CLUSTER", y="MEDIAN_SALARY", color="SENIORITY",
             barmode="group", color_discrete_sequence=PALETTE,
@@ -264,9 +295,9 @@ with tab2:
     with col_a:
         section("Salary Distribution (Box Plot)")
         insight("Box plot shows median, IQR, and outliers — a better read than averages alone.")
-        if not roles_df.empty:
+        if not roles_f.empty:
             fig = go.Figure()
-            for i, row in roles_df.iterrows():
+            for i, row in roles_f.iterrows():
                 p10 = row.get("P10_SALARY") or 0
                 p25 = row.get("P25_SALARY") or 0
                 med = row.get("MEDIAN_SALARY") or 0
@@ -288,9 +319,9 @@ with tab2:
     with col_b:
         section("Negotiation Window (P10 → P90)")
         insight("ML Engineer & AI/LLM roles show the widest comp bands — skilled negotiators can earn 3× the floor at the same level.")
-        if not roles_df.empty:
+        if not roles_f.empty:
             fig = go.Figure()
-            for i, row in roles_df.iterrows():
+            for i, row in roles_f.iterrows():
                 p10 = row.get("P10_SALARY") or 0
                 p90 = row.get("P90_SALARY") or 0
                 med = row.get("MEDIAN_SALARY") or 0

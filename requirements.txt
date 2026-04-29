@@ -4,4 +4,4 @@ pandas
 snowflake-connector-python[pandas]==3.6.0
 pyarrow
 python-dotenv
-google-generativeai
+groq

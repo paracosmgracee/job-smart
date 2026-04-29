@@ -1,19 +1,17 @@
 """
-Resume/JD skill extraction and gap analysis using Google Gemini API (free tier).
-Free tier: 1,500 req/day, no credit card needed — aistudio.google.com
+Resume/JD skill extraction and gap analysis using Groq API (free tier).
+Free tier: 14,400 req/day, no credit card needed — console.groq.com
+Uses Llama 3.1 70B for quality JSON extraction.
 """
 import os
 import json
-import google.generativeai as genai
+from groq import Groq
 from dotenv import load_dotenv
 
 load_dotenv()
 
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY", ""))
-_model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",
-    generation_config={"response_mime_type": "application/json"},
-)
+client = Groq(api_key=os.environ.get("GROQ_API_KEY", ""))
+MODEL = "llama-3.3-70b-versatile"
 
 EXTRACT_SYSTEM = (
     "You are a technical recruiter expert. Extract structured data from resumes and job descriptions. "
@@ -26,8 +24,15 @@ MATCH_SYSTEM = (
 
 
 def _call(system: str, user: str) -> dict:
-    response = _model.generate_content(f"{system}\n\n{user}")
-    return json.loads(response.text)
+    response = client.chat.completions.create(
+        model=MODEL,
+        response_format={"type": "json_object"},
+        messages=[
+            {"role": "system", "content": system},
+            {"role": "user",   "content": user},
+        ],
+    )
+    return json.loads(response.choices[0].message.content)
 
 
 def extract_skills_from_resume(resume_text: str) -> dict:

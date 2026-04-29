@@ -483,42 +483,63 @@ elif page == "Skills":
     st.markdown(f'<div class="page-sub">{role_label} · demand and salary signal by technology</div>', unsafe_allow_html=True)
 
     if not active_skills.empty:
-        scatter_df = active_skills[active_skills["MEDIAN_SALARY"] > 0].copy()
-        scatter_df["size"]  = scatter_df["JOB_COUNT"].apply(lambda x: max(8, min(40, x / 50)))
-        scatter_df["label"] = scatter_df["SKILL"].str.title()
+        bar_df = active_skills[active_skills["MEDIAN_SALARY"] > 0].copy()
+        bar_df["skill_label"] = bar_df["SKILL"].str.title()
+        bar_df["salary_fmt"]  = bar_df["MEDIAN_SALARY"].apply(lambda x: f"${int(x)//1000}k")
+        bar_df = bar_df.sort_values("JOB_COUNT", ascending=True)
 
-        # Only label the 12 most prominent skills (highest job count + extreme salary outliers)
-        top_by_count = set(scatter_df.nlargest(8, "JOB_COUNT").index)
-        top_by_salary = set(scatter_df.nlargest(4, "MEDIAN_SALARY").index)
-        label_idx = top_by_count | top_by_salary
-        scatter_df["text_label"] = scatter_df.apply(
-            lambda r: r["label"] if r.name in label_idx else "", axis=1
-        )
+        n_skills_shown = len(bar_df)
+        chart_height   = max(420, n_skills_shown * 22)
 
-        st.markdown('<div class="sec">Demand vs. Salary</div>', unsafe_allow_html=True)
-        fig = px.scatter(
-            scatter_df,
-            x="JOB_COUNT", y="MEDIAN_SALARY",
-            size="size",
-            color="MEDIAN_SALARY",
-            color_continuous_scale=[[0, "#1e1e3a"], [0.5, "#4f46e5"], [1, "#f59e0b"]],
-            hover_name="label",
-            hover_data={"JOB_COUNT": True, "MEDIAN_SALARY": True, "size": False, "text_label": False},
-            labels={"JOB_COUNT": "Job Postings", "MEDIAN_SALARY": "Median Annual Salary ($)"},
-            text="text_label",
-        )
-        fig.update_traces(textposition="top center", textfont_size=10)
-        med_x = scatter_df["JOB_COUNT"].median()
-        med_y = scatter_df["MEDIAN_SALARY"].median()
-        fig.add_hline(y=med_y, line_dash="dot", line_color=C["muted"], opacity=0.5)
-        fig.add_vline(x=med_x, line_dash="dot", line_color=C["muted"], opacity=0.5)
-        fig.update_layout(
-            coloraxis_showscale=False,
-            yaxis=dict(tickformat="$,.0f", showgrid=True, gridcolor=C["border"]),
-            xaxis=dict(showgrid=True, gridcolor=C["border"]),
-            height=460, **CHART,
-        )
-        st.plotly_chart(fig, use_container_width=True)
+        col_chart, col_sal = st.columns([3, 2], gap="large")
+
+        with col_chart:
+            st.markdown('<div class="sec">Demand — Job Count by Skill</div>', unsafe_allow_html=True)
+            fig = px.bar(
+                bar_df,
+                x="JOB_COUNT", y="skill_label",
+                orientation="h",
+                color="JOB_COUNT",
+                color_continuous_scale=[[0, "#1e1e3a"], [1, "#4f46e5"]],
+                labels={"JOB_COUNT": "Job Postings", "skill_label": ""},
+                text="JOB_COUNT",
+                hover_data={"MEDIAN_SALARY": True, "JOB_COUNT": True, "salary_fmt": False},
+            )
+            fig.update_traces(
+                texttemplate="%{text:,}",
+                textposition="outside",
+                textfont_size=9,
+            )
+            fig.update_layout(
+                coloraxis_showscale=False,
+                xaxis=dict(showgrid=True, gridcolor=C["border"]),
+                yaxis=dict(showgrid=False, tickfont=dict(size=10)),
+                height=chart_height, **CHART,
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        with col_sal:
+            st.markdown('<div class="sec">Median Salary by Skill</div>', unsafe_allow_html=True)
+            fig2 = px.bar(
+                bar_df,
+                x="MEDIAN_SALARY", y="skill_label",
+                orientation="h",
+                color="MEDIAN_SALARY",
+                color_continuous_scale=[[0, "#1e2a1e"], [1, "#f59e0b"]],
+                labels={"MEDIAN_SALARY": "Median Salary ($)", "skill_label": ""},
+                text="salary_fmt",
+            )
+            fig2.update_traces(
+                textposition="outside",
+                textfont_size=9,
+            )
+            fig2.update_layout(
+                coloraxis_showscale=False,
+                xaxis=dict(tickformat="$,.0f", showgrid=True, gridcolor=C["border"]),
+                yaxis=dict(showgrid=False, tickfont=dict(size=10)),
+                height=chart_height, **CHART,
+            )
+            st.plotly_chart(fig2, use_container_width=True)
 
     st.markdown('<hr class="divider">', unsafe_allow_html=True)
     st.markdown(f'<div class="sec">Top 20 Skills — {role_label}</div>', unsafe_allow_html=True)

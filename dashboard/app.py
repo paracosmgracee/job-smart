@@ -569,15 +569,11 @@ elif page == "Skills":
 
     if not active_skills.empty:
         cols = ["DEMAND_RANK", "SKILL", "JOB_COUNT", "MEDIAN_SALARY"]
-        if "SENIOR_COUNT" in active_skills.columns:
-            cols.append("SENIOR_COUNT")
         tbl = active_skills[cols].copy()
-        tbl.columns = ["Rank", "Skill", "# Jobs", "Median Salary"] + (["Senior Jobs"] if "SENIOR_COUNT" in cols else [])
+        tbl.columns = ["Rank", "Skill", "# Jobs", "Median Salary"]
         tbl["Skill"]         = tbl["Skill"].str.title()
         tbl["Median Salary"] = tbl["Median Salary"].apply(lambda x: f"${int(x):,}" if pd.notna(x) and x > 0 else "—")
         tbl["# Jobs"]        = tbl["# Jobs"].apply(lambda x: f"{int(x):,}")
-        if "Senior Jobs" in tbl.columns:
-            tbl["Senior Jobs"] = tbl["Senior Jobs"].apply(lambda x: f"{int(x):,}" if pd.notna(x) else "—")
         st.dataframe(tbl, use_container_width=True, hide_index=True)
 
 

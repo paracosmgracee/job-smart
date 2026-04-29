@@ -301,22 +301,88 @@ if page == "Market Overview":
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown('<div class="sec">Postings by Role</div>', unsafe_allow_html=True)
-    if not roles_f.empty:
-        fig = px.bar(
-            roles_f.sort_values("POSTING_COUNT"),
-            x="POSTING_COUNT", y="ROLE_CLUSTER",
-            orientation="h",
-            color="MEDIAN_SALARY",
-            color_continuous_scale=[[0, "#1e1e3a"], [1, "#4f46e5"]],
-            labels={"POSTING_COUNT": "Postings", "ROLE_CLUSTER": "", "MEDIAN_SALARY": "Median Salary"},
-            text="POSTING_COUNT",
-        )
-        fig.update_traces(texttemplate="%{text:,}", textposition="outside", textfont_size=10)
-        fig.update_layout(coloraxis_showscale=False, height=320, **CHART)
-        fig.update_xaxes(showgrid=False, showticklabels=False)
-        fig.update_yaxes(showgrid=False)
-        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
+    NO_BAR_CFG = {"displayModeBar": False, "scrollZoom": False}
+
+    if sel_role == "All Roles":
+        col_l, col_r = st.columns(2, gap="large")
+        with col_l:
+            st.markdown('<div class="sec">Postings by Role</div>', unsafe_allow_html=True)
+            if not roles_f.empty:
+                fig = px.bar(
+                    roles_f.sort_values("POSTING_COUNT"),
+                    x="POSTING_COUNT", y="ROLE_CLUSTER", orientation="h",
+                    color="MEDIAN_SALARY",
+                    color_continuous_scale=[[0, "#1e1e3a"], [1, "#4f46e5"]],
+                    labels={"POSTING_COUNT": "Postings", "ROLE_CLUSTER": "", "MEDIAN_SALARY": "Median Salary"},
+                    text="POSTING_COUNT",
+                )
+                fig.update_traces(texttemplate="%{text:,}", textposition="outside", textfont_size=10)
+                fig.update_layout(coloraxis_showscale=False, height=320, **CHART)
+                fig.update_xaxes(showgrid=False, showticklabels=False)
+                fig.update_yaxes(showgrid=False)
+                st.plotly_chart(fig, use_container_width=True, config=NO_BAR_CFG)
+
+        with col_r:
+            st.markdown('<div class="sec">Median Salary by Role</div>', unsafe_allow_html=True)
+            if not roles_f.empty:
+                sal_roles = roles_f.sort_values("MEDIAN_SALARY", ascending=True)
+                sal_roles["sal_fmt"] = sal_roles["MEDIAN_SALARY"].apply(lambda x: f"${int(x)//1000}k")
+                fig = px.bar(
+                    sal_roles, x="MEDIAN_SALARY", y="ROLE_CLUSTER", orientation="h",
+                    color="MEDIAN_SALARY",
+                    color_continuous_scale=[[0, "#1e2a1e"], [1, "#f59e0b"]],
+                    labels={"MEDIAN_SALARY": "Median Salary ($)", "ROLE_CLUSTER": ""},
+                    text="sal_fmt",
+                )
+                fig.update_traces(textposition="outside", textfont_size=10, marker_line_width=0)
+                fig.update_layout(coloraxis_showscale=False, height=320, **CHART)
+                fig.update_xaxes(showgrid=False, showticklabels=False)
+                fig.update_yaxes(showgrid=False)
+                st.plotly_chart(fig, use_container_width=True, config=NO_BAR_CFG)
+
+    else:
+        # Single role — show breakdown charts instead of one useless bar
+        col_l, col_r = st.columns(2, gap="large")
+
+        with col_l:
+            st.markdown('<div class="sec">Experience Level Breakdown</div>', unsafe_allow_html=True)
+            sen_data = role_sen_f.dropna(subset=["SENIORITY", "POSTING_COUNT"])
+            if not sen_data.empty:
+                sen_data = sen_data.copy()
+                sen_data["SENIORITY"] = pd.Categorical(
+                    sen_data["SENIORITY"],
+                    categories=["Entry Level", "Mid Level", "Senior", "Staff/Lead", "Principal"],
+                    ordered=True
+                )
+                sen_data = sen_data.sort_values("SENIORITY")
+                SEN_COLORS = {"Entry Level": "#10b981", "Mid Level": "#4f46e5",
+                              "Senior": "#f59e0b", "Staff/Lead": "#f43f5e", "Principal": "#8b5cf6"}
+                fig = px.bar(
+                    sen_data, x="SENIORITY", y="POSTING_COUNT",
+                    color="SENIORITY", color_discrete_map=SEN_COLORS,
+                    text="POSTING_COUNT",
+                    labels={"SENIORITY": "", "POSTING_COUNT": "Postings"},
+                )
+                fig.update_traces(textposition="outside", textfont_size=10, marker_line_width=0)
+                fig.update_layout(showlegend=False, height=300, **CHART)
+                fig.update_xaxes(showgrid=False)
+                fig.update_yaxes(showgrid=True, gridcolor=C["border"])
+                st.plotly_chart(fig, use_container_width=True, config=NO_BAR_CFG)
+
+        with col_r:
+            st.markdown('<div class="sec">Salary by Seniority</div>', unsafe_allow_html=True)
+            if not sen_data.empty:
+                fig = px.bar(
+                    sen_data, x="SENIORITY", y="MEDIAN_SALARY",
+                    color="SENIORITY", color_discrete_map=SEN_COLORS,
+                    text=sen_data["MEDIAN_SALARY"].apply(lambda x: f"${int(x)//1000}k" if pd.notna(x) else ""),
+                    labels={"SENIORITY": "", "MEDIAN_SALARY": "Median Salary ($)"},
+                )
+                fig.update_traces(textposition="outside", textfont_size=10, marker_line_width=0)
+                fig.update_layout(showlegend=False, height=300, **CHART)
+                fig.update_xaxes(showgrid=False)
+                fig.update_yaxes(tickformat="$,.0f", showgrid=True, gridcolor=C["border"])
+                st.plotly_chart(fig, use_container_width=True, config=NO_BAR_CFG)
 
     st.markdown('<hr class="divider">', unsafe_allow_html=True)
     st.markdown('<div class="sec">Geographic Distribution</div>', unsafe_allow_html=True)

@@ -9,6 +9,7 @@ sources:
       - name: JOB_SKILLS
       - name: COMPANIES
       - name: ADZUNA_POSTINGS
+      - name: JSEARCH_POSTINGS
 
 models:
   - name: stg_job_postings

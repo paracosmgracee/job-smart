@@ -19,8 +19,9 @@ QUERIES = [
     "analytics engineer", "business intelligence", "llm engineer",
 ]
 
-PAGES_PER_QUERY = 5   # 50 results/page × 5 pages = 250 per role
+PAGES_PER_QUERY = 10  # 50 results/page × 10 pages = 500 per role (Adzuna max)
 RESULTS_PER_PAGE = 50
+MAX_DAYS_OLD = 30     # pull postings up to 30 days old
 
 
 def fetch_jobs(query: str, page: int) -> list[dict]:
@@ -32,6 +33,7 @@ def fetch_jobs(query: str, page: int) -> list[dict]:
         "where": "united states",
         "content-type": "application/json",
         "sort_by": "date",
+        "max_days_old": MAX_DAYS_OLD,
     }
     r = requests.get(url, params=params, timeout=15)
     r.raise_for_status()

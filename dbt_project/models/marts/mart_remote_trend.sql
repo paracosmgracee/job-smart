@@ -5,7 +5,7 @@ with jobs as (
         remote_allowed,
         work_type,
         job_id
-    from {{ ref('stg_job_postings') }}
+    from {{ ref('stg_all_postings') }}
     where listed_at is not null
 ),
 

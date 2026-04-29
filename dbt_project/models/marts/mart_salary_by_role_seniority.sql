@@ -1,6 +1,6 @@
 -- Salary by role cluster AND seniority (for grouped bar chart)
 with jobs as (
-    select * from {{ ref('stg_job_postings') }}
+    select * from {{ ref('stg_all_postings') }}
     where annual_salary_est > 20000
       and annual_salary_est < 800000
       and experience_level in ('EN','MI','SE','EX','DI')

@@ -1,7 +1,7 @@
 -- Monthly job posting volume by role cluster
 -- Used by: hiring trends time-series chart
 with jobs as (
-    select * from {{ ref('stg_job_postings') }}
+    select * from {{ ref('stg_all_postings') }}
     where listed_at is not null
 ),
 

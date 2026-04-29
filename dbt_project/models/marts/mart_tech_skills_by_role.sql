@@ -30,7 +30,7 @@ jobs as (
             when lower(job_title) like '%analytics engineer%' then 'Analytics Engineer'
             else 'Other'
         end as role_cluster
-    from {{ ref('stg_job_postings') }}
+    from {{ ref('stg_all_postings') }}
     where description is not null
       and length(description) > 100
 ),

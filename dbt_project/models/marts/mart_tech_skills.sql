@@ -20,7 +20,7 @@ jobs as (
         lower(description)          as desc_lower,
         annual_salary_est,
         experience_level
-    from {{ ref('stg_job_postings') }}
+    from {{ ref('stg_all_postings') }}
     where description is not null
       and length(description) > 100
 ),

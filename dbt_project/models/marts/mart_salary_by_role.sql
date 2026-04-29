@@ -1,7 +1,7 @@
 -- Salary distribution by job title cluster
 -- Powers the salary analysis dashboard panel
 with jobs as (
-    select * from {{ ref('stg_job_postings') }}
+    select * from {{ ref('stg_all_postings') }}
     where annual_salary_est > 10000  -- filter out bad data
       and annual_salary_est < 1000000
 ),

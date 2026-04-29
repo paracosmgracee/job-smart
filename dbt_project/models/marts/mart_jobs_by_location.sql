@@ -20,7 +20,7 @@ with jobs as (
             when lower(job_title) like '%analytics engineer%' then 'Analytics Engineer'
             else null
         end as role_cluster
-    from {{ ref('stg_job_postings') }}
+    from {{ ref('stg_all_postings') }}
     where location is not null
       and location like '%, %'
 ),

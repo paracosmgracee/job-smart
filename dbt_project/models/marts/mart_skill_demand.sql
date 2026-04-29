@@ -6,7 +6,7 @@ with skills as (
 
 jobs as (
     select job_id, listed_at, work_type, experience_level, annual_salary_est
-    from {{ ref('stg_job_postings') }}
+    from {{ ref('stg_all_postings') }}
 ),
 
 joined as (

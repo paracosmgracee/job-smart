@@ -496,6 +496,9 @@ elif page == "Skills":
             st.markdown('<div class="sec">Demand — Job Count</div>', unsafe_allow_html=True)
             x_max  = bar_df["JOB_COUNT"].max()
             dtick  = 20000 if x_max > 40000 else 10000 if x_max > 10000 else 2000
+            bar_df["count_fmt"] = bar_df["JOB_COUNT"].apply(
+                lambda x: f"{int(x/1000)}k" if x >= 1000 else str(int(x))
+            )
             fig = px.bar(
                 bar_df,
                 x="JOB_COUNT", y="skill_label",
@@ -503,9 +506,10 @@ elif page == "Skills":
                 color="JOB_COUNT",
                 color_continuous_scale=[[0, "#1e1e3a"], [1, "#4f46e5"]],
                 labels={"JOB_COUNT": "Job Postings", "skill_label": ""},
-                hover_data={"MEDIAN_SALARY": True, "JOB_COUNT": True, "salary_fmt": False},
+                text="count_fmt",
+                hover_data={"MEDIAN_SALARY": True, "JOB_COUNT": True, "salary_fmt": False, "count_fmt": False},
             )
-            fig.update_traces(marker_line_width=0)
+            fig.update_traces(textposition="outside", textfont_size=9, marker_line_width=0)
             fig.update_layout(
                 coloraxis_showscale=False,
                 bargap=0.25,

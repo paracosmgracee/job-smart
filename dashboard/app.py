@@ -800,9 +800,9 @@ elif page == "Resume Analyzer":
         if not resume_text or not jd_text:
             st.warning("Paste both your resume and the job description first.")
         else:
-            api_key = _secret("ANTHROPIC_API_KEY")
-            if not api_key or api_key == "your_anthropic_key_here":
-                st.info("Add your Anthropic API key to enable AI analysis. Set ANTHROPIC_API_KEY in Streamlit secrets.")
+            api_key = _secret("GEMINI_API_KEY")
+            if not api_key or api_key == "your_gemini_key_here":
+                st.info("Add your Gemini API key to enable AI analysis. Set GEMINI_API_KEY in Streamlit secrets.")
             else:
                 try:
                     import sys
@@ -879,9 +879,9 @@ elif page == "Resume Analyzer":
         ])
 
     if st.button("Generate 90-Day Roadmap", use_container_width=True) and skills_input:
-        api_key = _secret("ANTHROPIC_API_KEY")
-        if not api_key or api_key == "your_anthropic_key_here":
-            st.info("Add your Anthropic API key to Streamlit secrets to enable this feature.")
+        api_key = _secret("GEMINI_API_KEY")
+        if not api_key or api_key == "your_gemini_key_here":
+            st.info("Add your Gemini API key to Streamlit secrets to enable this feature.")
         else:
             try:
                 import sys

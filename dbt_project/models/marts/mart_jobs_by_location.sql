@@ -77,6 +77,7 @@ select
 from with_state
 where length(state_code) = 2
   and state_code rlike '[A-Z]{2}'
+  and state_code != 'US'
 group by state_code
 having job_count >= 10
 order by job_count desc

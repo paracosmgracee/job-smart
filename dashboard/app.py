@@ -348,9 +348,6 @@ if page == "Market Overview":
                 height=360, **CHART,
             )
             st.plotly_chart(fig_map, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
-                "scrollZoom": False,
-                "displayModeBar": False,
-            })
 
         with col_top:
             st.markdown('<div class="sec">Top States</div>', unsafe_allow_html=True)

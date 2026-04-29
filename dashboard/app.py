@@ -371,21 +371,28 @@ elif page == "Compensation":
     """, unsafe_allow_html=True)
 
     st.markdown('<div class="sec">Salary by Role & Seniority</div>', unsafe_allow_html=True)
-    all_sen = ["Entry Level", "Mid Level", "Senior", "Staff/Lead", "Principal"]
-    sel_sen = st.multiselect("Seniority levels", all_sen, default=all_sen, label_visibility="collapsed")
+    SEN_ORDER  = ["Entry Level", "Mid Level", "Senior", "Staff/Lead", "Principal"]
+    SEN_COLORS = {"Entry Level": "#10b981", "Mid Level": "#4f46e5",
+                  "Senior": "#f59e0b", "Staff/Lead": "#f43f5e", "Principal": "#8b5cf6"}
+    sel_sen = st.multiselect("Seniority levels", SEN_ORDER, default=SEN_ORDER, label_visibility="collapsed")
 
     if not role_sen_f.empty:
-        filtered = role_sen_f[role_sen_f["SENIORITY"].isin(sel_sen)] if sel_sen else role_sen_df
+        filtered = role_sen_f[role_sen_f["SENIORITY"].isin(sel_sen)].copy() if sel_sen else role_sen_df.copy()
+        # enforce Entry→Principal order in both bars and legend
+        filtered["SENIORITY"] = pd.Categorical(filtered["SENIORITY"], categories=SEN_ORDER, ordered=True)
+        filtered = filtered.sort_values(["ROLE_CLUSTER", "SENIORITY"])
+        active_sen = [s for s in SEN_ORDER if s in filtered["SENIORITY"].values]
         fig = px.bar(
             filtered, x="ROLE_CLUSTER", y="MEDIAN_SALARY", color="SENIORITY",
             barmode="group",
-            color_discrete_sequence=PALETTE,
+            category_orders={"SENIORITY": SEN_ORDER},
+            color_discrete_map=SEN_COLORS,
             labels={"ROLE_CLUSTER": "", "MEDIAN_SALARY": "Median Salary ($)", "SENIORITY": ""},
         )
         fig.update_layout(
             yaxis=dict(tickformat="$,.0f", showgrid=True, gridcolor=C["border"]),
             xaxis=dict(showgrid=False),
-            legend=dict(orientation="h", y=-0.2, font=dict(size=10)),
+            legend=dict(orientation="h", y=-0.2, font=dict(size=10), traceorder="normal"),
             height=360, **CHART,
         )
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})

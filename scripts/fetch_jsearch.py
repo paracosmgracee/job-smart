@@ -120,7 +120,7 @@ def main():
                 break
 
     df = pd.DataFrame(all_jobs)
-    df = df.drop_duplicates(subset=["JOB_ID"])
+    df = df.drop_duplicates(subset=["JOB_ID"]).reset_index(drop=True)
     print(f"\nTotal unique jobs: {len(df):,}")
 
     with get_conn() as conn:

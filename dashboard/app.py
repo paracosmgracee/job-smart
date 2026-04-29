@@ -178,14 +178,9 @@ section[data-testid="stSidebar"] .block-container {{
     margin-bottom: 1rem;
 }}
 
-/* Sidebar nav label */
-.nav-label {{
-    font-size: 0.65rem;
-    font-weight: 600;
-    color: {C["muted"]};
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 1.2rem 0 0.4rem 0;
+/* Pills nav override */
+div[data-testid="stPills"] {{
+    margin-bottom: 1.5rem;
 }}
 </style>
 """, unsafe_allow_html=True)
@@ -216,26 +211,23 @@ skills_df      = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS ORDER BY DEMAND_R
 skills_role_df = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS_BY_ROLE ORDER BY ROLE_CLUSTER, ROLE_RANK")
 geo_df         = q(conn, "SELECT * FROM MARTS.MART_JOBS_BY_LOCATION ORDER BY JOB_COUNT DESC")
 
-# ── Sidebar ────────────────────────────────────────────────────────────────
-with st.sidebar:
-    st.markdown('<div style="font-size:1rem;font-weight:700;color:#f0f0f8;letter-spacing:-0.01em">Job Market<br>Intelligence</div>', unsafe_allow_html=True)
-    st.markdown('<div style="font-size:0.68rem;color:#3a3a50;margin-top:0.3rem;margin-bottom:1.5rem">2023 – 2026 · US Tech</div>', unsafe_allow_html=True)
-
-    st.markdown('<div class="nav-label">Navigation</div>', unsafe_allow_html=True)
-    page = st.radio(
-        "page",
-        ["Market Overview", "Compensation", "Skills", "Resume Analyzer"],
-        label_visibility="collapsed",
-    )
-
-    st.markdown('<div class="nav-label">Filter</div>', unsafe_allow_html=True)
+# ── Top header ────────────────────────────────────────────────────────────
+hcol1, hcol2 = st.columns([3, 1])
+with hcol1:
+    st.markdown('<div style="font-size:1.15rem;font-weight:700;color:#f0f0f8;letter-spacing:-0.02em;margin-bottom:0.1rem">Job Market Intelligence</div>', unsafe_allow_html=True)
+    st.markdown('<div style="font-size:0.72rem;color:#3a3a50;margin-bottom:1rem">2023 – 2026 · US Tech</div>', unsafe_allow_html=True)
+with hcol2:
     all_roles = sorted(roles_df["ROLE_CLUSTER"].dropna().unique().tolist()) if not roles_df.empty else []
     sel_role = st.selectbox("Role", ["All Roles"] + all_roles, label_visibility="collapsed")
 
-    st.markdown('<hr style="border:none;border-top:1px solid #1e1e2a;margin:1.5rem 0">', unsafe_allow_html=True)
-    total_jobs = int(roles_df["POSTING_COUNT"].sum()) if not roles_df.empty else 0
-    last_run   = str(trends_df["MONTH"].max())[:7] if not trends_df.empty else "—"
-    st.markdown(f'<div style="font-size:0.68rem;color:#3a3a50">{total_jobs:,} postings indexed<br>Last updated {last_run}</div>', unsafe_allow_html=True)
+page = st.pills(
+    "Navigation",
+    ["Market Overview", "Compensation", "Skills", "Resume Analyzer"],
+    default="Market Overview",
+    label_visibility="collapsed",
+)
+
+last_run = str(trends_df["MONTH"].max())[:7] if not trends_df.empty else "—"
 
 # ── Filtered frames ────────────────────────────────────────────────────────
 if sel_role == "All Roles":
@@ -355,7 +347,10 @@ if page == "Market Overview":
                 coloraxis_colorbar=dict(title="Jobs", thickness=10, len=0.6),
                 height=360, **CHART,
             )
-            st.plotly_chart(fig_map, use_container_width=True)
+            st.plotly_chart(fig_map, use_container_width=True, config={
+                "scrollZoom": False,
+                "displayModeBar": False,
+            })
 
         with col_top:
             st.markdown('<div class="sec">Top States</div>', unsafe_allow_html=True)

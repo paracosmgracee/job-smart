@@ -186,8 +186,7 @@ div[data-testid="stPills"] {{
 """, unsafe_allow_html=True)
 
 # ── Snowflake ──────────────────────────────────────────────────────────────
-@st.cache_resource
-def get_conn():
+def _new_conn():
     return snowflake.connector.connect(
         account=_secret("SNOWFLAKE_ACCOUNT"),
         user=_secret("SNOWFLAKE_USER"),
@@ -196,11 +195,23 @@ def get_conn():
         warehouse=_secret("SNOWFLAKE_WAREHOUSE"),
         role=_secret("SNOWFLAKE_ROLE"),
         schema="MARTS",
+        login_timeout=30,
+        network_timeout=60,
     )
+
+@st.cache_resource
+def get_conn():
+    return _new_conn()
 
 @st.cache_data(ttl=3600)
 def q(_conn, sql):
-    return pd.read_sql(sql, _conn)
+    try:
+        return pd.read_sql(sql, _conn)
+    except Exception:
+        # Connection may have gone stale — clear cache and reconnect once
+        get_conn.clear()
+        fresh = _new_conn()
+        return pd.read_sql(sql, fresh)
 
 conn = get_conn()
 roles_df       = q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_ROLE ORDER BY POSTING_COUNT DESC")

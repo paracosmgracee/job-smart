@@ -306,7 +306,7 @@ if page == "Market Overview":
             fig.update_layout(coloraxis_showscale=False, height=300, **CHART)
             fig.update_xaxes(showgrid=False, showticklabels=False)
             fig.update_yaxes(showgrid=False)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
 
     with col_r:
         st.markdown('<div class="sec">Hiring Volume Over Time</div>', unsafe_allow_html=True)
@@ -324,7 +324,7 @@ if page == "Market Overview":
             )
             fig.update_xaxes(showgrid=False)
             fig.update_yaxes(showgrid=True, gridcolor=C["border"])
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
 
     st.markdown('<hr class="divider">', unsafe_allow_html=True)
     st.markdown('<div class="sec">Geographic Distribution</div>', unsafe_allow_html=True)
@@ -347,7 +347,7 @@ if page == "Market Overview":
                 coloraxis_colorbar=dict(title="Jobs", thickness=10, len=0.6),
                 height=360, **CHART,
             )
-            st.plotly_chart(fig_map, use_container_width=True, config={
+            st.plotly_chart(fig_map, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
                 "scrollZoom": False,
                 "displayModeBar": False,
             })
@@ -399,7 +399,7 @@ elif page == "Compensation":
             legend=dict(orientation="h", y=-0.2, font=dict(size=10)),
             height=360, **CHART,
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
 
     st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
@@ -426,7 +426,7 @@ elif page == "Compensation":
                 yaxis=dict(tickformat="$,.0f", title="Annual Salary", showgrid=True, gridcolor=C["border"]),
                 showlegend=False, height=320, **CHART,
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
 
     with col_b:
         st.markdown('<div class="sec">Negotiation Window (P10 → P90)</div>', unsafe_allow_html=True)
@@ -450,7 +450,7 @@ elif page == "Compensation":
                 xaxis=dict(showgrid=False),
                 height=320, **CHART,
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
 
     st.markdown('<hr class="divider">', unsafe_allow_html=True)
     st.markdown('<div class="sec">Median Salary by State (Top 20)</div>', unsafe_allow_html=True)
@@ -471,7 +471,7 @@ elif page == "Compensation":
             xaxis=dict(showgrid=False),
             height=320, **CHART,
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
 
 
 # ══════════════════════════════════════════════════════════════════════════
@@ -482,14 +482,14 @@ elif page == "Skills":
     st.markdown('<div class="page-title">Skills Intelligence</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="page-sub">{role_label} · demand and salary signal by technology</div>', unsafe_allow_html=True)
 
+    FIXED_H = 520
+    NO_BAR  = {"displayModeBar": False, "scrollZoom": False}
+
     if not active_skills.empty:
-        bar_df = active_skills[active_skills["MEDIAN_SALARY"] > 0].copy()
+        bar_df = active_skills[active_skills["MEDIAN_SALARY"] > 0].head(25).copy()
         bar_df["skill_label"] = bar_df["SKILL"].str.title()
         bar_df["salary_fmt"]  = bar_df["MEDIAN_SALARY"].apply(lambda x: f"${int(x)//1000}k")
         bar_df = bar_df.sort_values("JOB_COUNT", ascending=True)
-
-        n_skills_shown = len(bar_df)
-        chart_height   = max(420, n_skills_shown * 22)
 
         col_chart, col_sal = st.columns([3, 2], gap="large")
 
@@ -505,18 +505,14 @@ elif page == "Skills":
                 text="JOB_COUNT",
                 hover_data={"MEDIAN_SALARY": True, "JOB_COUNT": True, "salary_fmt": False},
             )
-            fig.update_traces(
-                texttemplate="%{text:,}",
-                textposition="outside",
-                textfont_size=9,
-            )
+            fig.update_traces(texttemplate="%{text:,}", textposition="outside", textfont_size=9)
             fig.update_layout(
                 coloraxis_showscale=False,
                 xaxis=dict(showgrid=True, gridcolor=C["border"]),
                 yaxis=dict(showgrid=False, tickfont=dict(size=10)),
-                height=chart_height, **CHART,
+                height=FIXED_H, **CHART,
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, config=NO_BAR)
 
         with col_sal:
             st.markdown('<div class="sec">Median Salary by Skill</div>', unsafe_allow_html=True)
@@ -530,17 +526,14 @@ elif page == "Skills":
                 labels={"MEDIAN_SALARY": "Median Salary ($)", "skill_label": ""},
                 text="salary_fmt",
             )
-            fig2.update_traces(
-                textposition="outside",
-                textfont_size=9,
-            )
+            fig2.update_traces(textposition="outside", textfont_size=9)
             fig2.update_layout(
                 coloraxis_showscale=False,
                 xaxis=dict(tickformat="$,.0f", showgrid=True, gridcolor=C["border"]),
                 yaxis=dict(showgrid=False, tickfont=dict(size=10)),
-                height=chart_height, **CHART,
+                height=FIXED_H, **CHART,
             )
-            st.plotly_chart(fig2, use_container_width=True)
+            st.plotly_chart(fig2, use_container_width=True, config=NO_BAR)
 
     st.markdown('<hr class="divider">', unsafe_allow_html=True)
     st.markdown(f'<div class="sec">Top 20 Skills — {role_label}</div>', unsafe_allow_html=True)

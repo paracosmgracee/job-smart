@@ -210,6 +210,8 @@ role_sen_df    = q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_ROLE_SENIORITY")
 skills_df      = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS ORDER BY DEMAND_RANK")
 skills_role_df = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS_BY_ROLE ORDER BY ROLE_CLUSTER, ROLE_RANK")
 geo_df         = q(conn, "SELECT * FROM MARTS.MART_JOBS_BY_LOCATION ORDER BY JOB_COUNT DESC")
+tier_df        = q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_COMPANY_TIER ORDER BY SORT_ORDER")
+ai_cooc_df     = q(conn, "SELECT * FROM MARTS.MART_AI_SKILL_COOCCURRENCE ORDER BY SKILL_RANK")
 
 # ── Top header ────────────────────────────────────────────────────────────
 hcol1, hcol2 = st.columns([3, 1])
@@ -449,6 +451,51 @@ elif page == "Compensation":
         )
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
 
+    st.markdown('<hr class="divider">', unsafe_allow_html=True)
+    st.markdown('<div class="sec">Median Salary by Company Tier</div>', unsafe_allow_html=True)
+
+    if not tier_df.empty:
+        TIER_COLORS = {"FAANG+": "#f59e0b", "Scale-up": "#4f46e5", "Enterprise": "#10b981", "Startup / Other": "#f43f5e"}
+        tier_df["color"]      = tier_df["COMPANY_TIER"].map(TIER_COLORS)
+        tier_df["salary_fmt"] = tier_df["MEDIAN_SALARY"].apply(lambda x: f"${int(x)//1000}k")
+        tier_df["range_fmt"]  = tier_df.apply(
+            lambda r: f"P25 ${int(r['P25_SALARY'])//1000}k — P75 ${int(r['P75_SALARY'])//1000}k", axis=1
+        )
+
+        col_tier, col_tier_r = st.columns([2, 1], gap="large")
+        with col_tier:
+            fig = go.Figure()
+            for _, row in tier_df.iterrows():
+                fig.add_trace(go.Bar(
+                    x=[row["COMPANY_TIER"]],
+                    y=[row["MEDIAN_SALARY"]],
+                    name=row["COMPANY_TIER"],
+                    marker_color=TIER_COLORS.get(row["COMPANY_TIER"], "#888"),
+                    text=row["salary_fmt"],
+                    textposition="outside",
+                    hovertemplate=(
+                        f"<b>{row['COMPANY_TIER']}</b><br>"
+                        f"Median: ${int(row['MEDIAN_SALARY']):,}<br>"
+                        f"P25–P75: ${int(row['P25_SALARY']):,} – ${int(row['P75_SALARY']):,}<br>"
+                        f"Jobs: {int(row['JOB_COUNT']):,}<extra></extra>"
+                    ),
+                ))
+            fig.update_layout(
+                showlegend=False,
+                yaxis=dict(tickformat="$,.0f", showgrid=True, gridcolor=C["border"]),
+                xaxis=dict(showgrid=False),
+                height=320, **CHART,
+            )
+            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
+
+        with col_tier_r:
+            st.markdown('<div class="sec">By the numbers</div>', unsafe_allow_html=True)
+            tbl = tier_df[["COMPANY_TIER", "MEDIAN_SALARY", "JOB_COUNT"]].copy()
+            tbl.columns = ["Tier", "Median Salary", "Jobs"]
+            tbl["Median Salary"] = tbl["Median Salary"].apply(lambda x: f"${int(x):,}")
+            tbl["Jobs"] = tbl["Jobs"].apply(lambda x: f"{int(x):,}")
+            st.dataframe(tbl, use_container_width=True, hide_index=True)
+
 
 # ══════════════════════════════════════════════════════════════════════════
 # PAGE 3 — Skills
@@ -554,6 +601,49 @@ elif page == "Skills":
         tbl["Median Salary"] = tbl["Median Salary"].apply(lambda x: f"${int(x):,}" if pd.notna(x) and x > 0 else "—")
         tbl["# Jobs"]        = tbl["# Jobs"].apply(lambda x: f"{int(x):,}")
         st.dataframe(tbl, use_container_width=True, hide_index=True)
+
+    st.markdown('<hr class="divider">', unsafe_allow_html=True)
+    st.markdown('<div class="sec">Skills Paired with AI / LLM Requirements</div>', unsafe_allow_html=True)
+    st.markdown('<div style="font-size:0.75rem;color:#3a3a50;margin-bottom:0.8rem">Among job postings that mention LLM, RAG, generative AI or vector databases — which skills appear most often alongside them?</div>', unsafe_allow_html=True)
+
+    if not ai_cooc_df.empty:
+        ai_df = ai_cooc_df.head(20).copy()
+        ai_df["skill_label"] = ai_df["SKILL"].str.title()
+        ai_df["pct_fmt"]     = ai_df["PCT_OF_AI_JOBS"].apply(lambda x: f"{x:.0f}%")
+        ai_df = ai_df.sort_values("AI_JOB_COUNT", ascending=True)
+
+        col_ai, col_ai_r = st.columns([3, 2], gap="large")
+        with col_ai:
+            fig = px.bar(
+                ai_df,
+                x="PCT_OF_AI_JOBS", y="skill_label",
+                orientation="h",
+                color="MEDIAN_SALARY",
+                color_continuous_scale=[[0, "#1e1e3a"], [0.5, "#4f46e5"], [1, "#f59e0b"]],
+                text="pct_fmt",
+                labels={"PCT_OF_AI_JOBS": "% of AI/LLM Jobs", "skill_label": "", "MEDIAN_SALARY": "Median Salary"},
+            )
+            fig.update_traces(textposition="outside", textfont_size=9, marker_line_width=0)
+            n_ai = len(ai_df)
+            fig.update_layout(
+                coloraxis_showscale=False,
+                xaxis=dict(showgrid=True, gridcolor=C["border"], ticksuffix="%"),
+                yaxis=dict(showgrid=False, tickfont=dict(size=10)),
+                height=max(380, n_ai * 20 + 80), **CHART,
+            )
+            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
+
+        with col_ai_r:
+            st.markdown('<div class="sec">Top Skills in AI/LLM Jobs</div>', unsafe_allow_html=True)
+            ai_tbl = ai_df.sort_values("AI_JOB_COUNT", ascending=False)[
+                ["skill_label", "PCT_OF_AI_JOBS", "MEDIAN_SALARY"]
+            ].copy()
+            ai_tbl.columns = ["Skill", "% AI Jobs", "Median Salary"]
+            ai_tbl["% AI Jobs"]     = ai_tbl["% AI Jobs"].apply(lambda x: f"{x:.0f}%")
+            ai_tbl["Median Salary"] = ai_tbl["Median Salary"].apply(
+                lambda x: f"${int(x)//1000}k" if pd.notna(x) and x > 0 else "—"
+            )
+            st.dataframe(ai_tbl, use_container_width=True, hide_index=True)
 
 
 # ══════════════════════════════════════════════════════════════════════════

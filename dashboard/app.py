@@ -479,14 +479,15 @@ elif page == "Skills":
     st.markdown('<div class="page-title">Skills Intelligence</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="page-sub">{role_label} · demand and salary signal by technology</div>', unsafe_allow_html=True)
 
-    FIXED_H = 520
-    NO_BAR  = {"displayModeBar": False, "scrollZoom": False}
+    NO_BAR = {"displayModeBar": False, "scrollZoom": False}
 
     if not active_skills.empty:
-        bar_df = active_skills[active_skills["MEDIAN_SALARY"] > 0].head(25).copy()
+        bar_df = active_skills[active_skills["MEDIAN_SALARY"] > 0].copy()
         bar_df["skill_label"] = bar_df["SKILL"].str.title()
         bar_df["salary_fmt"]  = bar_df["MEDIAN_SALARY"].apply(lambda x: f"${int(x)//1000}k")
         bar_df = bar_df.sort_values("JOB_COUNT", ascending=True)
+
+        FIXED_H = max(420, len(bar_df) * 28 + 80)
 
         col_chart, col_sal = st.columns([3, 2], gap="large")
 

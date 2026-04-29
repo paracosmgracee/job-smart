@@ -288,43 +288,22 @@ if page == "Market Overview":
     </div>
     """, unsafe_allow_html=True)
 
-    col_l, col_r = st.columns([1, 1], gap="large")
-
-    with col_l:
-        st.markdown('<div class="sec">Postings by Role</div>', unsafe_allow_html=True)
-        if not roles_f.empty:
-            fig = px.bar(
-                roles_f.sort_values("POSTING_COUNT"),
-                x="POSTING_COUNT", y="ROLE_CLUSTER",
-                orientation="h",
-                color="MEDIAN_SALARY",
-                color_continuous_scale=[[0, "#1e1e3a"], [1, "#4f46e5"]],
-                labels={"POSTING_COUNT": "Postings", "ROLE_CLUSTER": "", "MEDIAN_SALARY": "Median Salary"},
-                text="POSTING_COUNT",
-            )
-            fig.update_traces(texttemplate="%{text:,}", textposition="outside", textfont_size=10)
-            fig.update_layout(coloraxis_showscale=False, height=300, **CHART)
-            fig.update_xaxes(showgrid=False, showticklabels=False)
-            fig.update_yaxes(showgrid=False)
-            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
-
-    with col_r:
-        st.markdown('<div class="sec">Hiring Volume Over Time</div>', unsafe_allow_html=True)
-        if not trends_f.empty:
-            fig = px.line(
-                trends_f, x="MONTH", y="POSTING_COUNT", color="ROLE_CLUSTER",
-                color_discrete_sequence=PALETTE,
-                labels={"MONTH": "", "POSTING_COUNT": "Postings", "ROLE_CLUSTER": ""},
-                markers=True,
-            )
-            fig.update_traces(line_width=2)
-            fig.update_layout(
-                legend=dict(orientation="h", y=-0.3, font=dict(size=10)),
-                height=300, **CHART,
-            )
-            fig.update_xaxes(showgrid=False)
-            fig.update_yaxes(showgrid=True, gridcolor=C["border"])
-            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
+    st.markdown('<div class="sec">Postings by Role</div>', unsafe_allow_html=True)
+    if not roles_f.empty:
+        fig = px.bar(
+            roles_f.sort_values("POSTING_COUNT"),
+            x="POSTING_COUNT", y="ROLE_CLUSTER",
+            orientation="h",
+            color="MEDIAN_SALARY",
+            color_continuous_scale=[[0, "#1e1e3a"], [1, "#4f46e5"]],
+            labels={"POSTING_COUNT": "Postings", "ROLE_CLUSTER": "", "MEDIAN_SALARY": "Median Salary"},
+            text="POSTING_COUNT",
+        )
+        fig.update_traces(texttemplate="%{text:,}", textposition="outside", textfont_size=10)
+        fig.update_layout(coloraxis_showscale=False, height=320, **CHART)
+        fig.update_xaxes(showgrid=False, showticklabels=False)
+        fig.update_yaxes(showgrid=False)
+        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False})
 
     st.markdown('<hr class="divider">', unsafe_allow_html=True)
     st.markdown('<div class="sec">Geographic Distribution</div>', unsafe_allow_html=True)

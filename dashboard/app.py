@@ -520,8 +520,9 @@ elif page == "Skills":
 
         with col_sal:
             st.markdown('<div class="sec">Median Salary by Skill</div>', unsafe_allow_html=True)
+            sal_df = bar_df.sort_values("MEDIAN_SALARY", ascending=True)
             fig2 = px.bar(
-                bar_df,
+                sal_df,
                 x="MEDIAN_SALARY", y="skill_label",
                 orientation="h",
                 color="MEDIAN_SALARY",

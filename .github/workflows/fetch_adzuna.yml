@@ -2,7 +2,7 @@ name: Daily Adzuna Fetch
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # 每天 UTC 6:00 (北京时间 14:00)
+    - cron: '0 7 * * *'   # 每天 UTC 7:00 (LA 时间 00:00 PDT)
   workflow_dispatch:        # 也可以手动触发
 
 jobs:

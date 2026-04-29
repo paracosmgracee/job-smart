@@ -447,7 +447,7 @@ if page == "Market Overview":
       </div>
       <div style="font-size:0.68rem;color:{C['muted']}">
         Last fetch <span style="color:{C['text']}">{last_fetch}</span>
-        &nbsp;·&nbsp; Refreshes daily at 14:00 CST
+        &nbsp;·&nbsp; Refreshes daily at 00:00 PDT
         &nbsp;·&nbsp; <span style="color:{C['text']}">{int(remote_df['TOTAL_COUNT'].iloc[0]):,}</span> live records
       </div>
     </div>

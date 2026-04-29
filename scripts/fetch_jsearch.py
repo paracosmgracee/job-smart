@@ -41,7 +41,7 @@ def fetch_jobs(query: str, page: int) -> list[dict]:
         "country":         "us",
         "language":        "en",
     }
-    r = requests.get(BASE, headers=HEADERS, params=params, timeout=20)
+    r = requests.get(BASE, headers=HEADERS, params=params, timeout=40)
     r.raise_for_status()
     return r.json().get("data", [])
 

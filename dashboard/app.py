@@ -487,12 +487,15 @@ elif page == "Skills":
         bar_df["salary_fmt"]  = bar_df["MEDIAN_SALARY"].apply(lambda x: f"${int(x)//1000}k")
         bar_df = bar_df.sort_values("JOB_COUNT", ascending=True)
 
-        FIXED_H = max(420, len(bar_df) * 28 + 80)
+        n      = len(bar_df)
+        FIXED_H = max(400, n * 18 + 100)   # ~18px per bar keeps it compact
 
-        col_chart, col_sal = st.columns([3, 2], gap="large")
+        col_chart, col_sal = st.columns([2, 3], gap="large")
 
         with col_chart:
-            st.markdown('<div class="sec">Demand — Job Count by Skill</div>', unsafe_allow_html=True)
+            st.markdown('<div class="sec">Demand — Job Count</div>', unsafe_allow_html=True)
+            x_max  = bar_df["JOB_COUNT"].max()
+            dtick  = 20000 if x_max > 40000 else 10000 if x_max > 10000 else 2000
             fig = px.bar(
                 bar_df,
                 x="JOB_COUNT", y="skill_label",
@@ -500,14 +503,15 @@ elif page == "Skills":
                 color="JOB_COUNT",
                 color_continuous_scale=[[0, "#1e1e3a"], [1, "#4f46e5"]],
                 labels={"JOB_COUNT": "Job Postings", "skill_label": ""},
-                text="JOB_COUNT",
                 hover_data={"MEDIAN_SALARY": True, "JOB_COUNT": True, "salary_fmt": False},
             )
-            fig.update_traces(texttemplate="%{text:,}", textposition="outside", textfont_size=9)
+            fig.update_traces(marker_line_width=0)
             fig.update_layout(
                 coloraxis_showscale=False,
-                xaxis=dict(showgrid=True, gridcolor=C["border"]),
-                yaxis=dict(showgrid=False, tickfont=dict(size=10)),
+                bargap=0.25,
+                xaxis=dict(showgrid=True, gridcolor=C["border"], dtick=dtick,
+                           tickformat=".0s"),
+                yaxis=dict(showgrid=False, tickfont=dict(size=9)),
                 height=FIXED_H, **CHART,
             )
             st.plotly_chart(fig, use_container_width=True, config=NO_BAR)
@@ -524,11 +528,13 @@ elif page == "Skills":
                 labels={"MEDIAN_SALARY": "Median Salary ($)", "skill_label": ""},
                 text="salary_fmt",
             )
-            fig2.update_traces(textposition="outside", textfont_size=9)
+            fig2.update_traces(textposition="outside", textfont_size=9, marker_line_width=0)
             fig2.update_layout(
                 coloraxis_showscale=False,
-                xaxis=dict(tickformat="$,.0f", showgrid=True, gridcolor=C["border"]),
-                yaxis=dict(showgrid=False, tickfont=dict(size=10)),
+                bargap=0.25,
+                xaxis=dict(tickformat="$,.0s", showgrid=True, gridcolor=C["border"],
+                           dtick=50000),
+                yaxis=dict(showgrid=False, tickfont=dict(size=9)),
                 height=FIXED_H, **CHART,
             )
             st.plotly_chart(fig2, use_container_width=True, config=NO_BAR)

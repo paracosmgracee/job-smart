@@ -223,6 +223,18 @@ skills_role_df = q(conn, "SELECT * FROM MARTS.MART_TECH_SKILLS_BY_ROLE ORDER BY 
 geo_df         = q(conn, "SELECT * FROM MARTS.MART_JOBS_BY_LOCATION ORDER BY JOB_COUNT DESC")
 tier_df        = q(conn, "SELECT * FROM MARTS.MART_SALARY_BY_COMPANY_TIER ORDER BY SORT_ORDER")
 ai_cooc_df     = q(conn, "SELECT * FROM MARTS.MART_AI_SKILL_COOCCURRENCE ORDER BY SKILL_RANK")
+remote_df      = q(conn, """
+    SELECT
+        count_if(remote_allowed IN ('1','hybrid'))                        as remote_count,
+        count(*)                                                          as total_count,
+        round(count_if(remote_allowed IN ('1','hybrid')) * 100.0
+              / nullif(count(*), 0), 1)                                   as remote_pct,
+        count_if(remote_allowed = 'hybrid')                               as hybrid_count,
+        round(count_if(remote_allowed = 'hybrid') * 100.0
+              / nullif(count(*), 0), 1)                                   as hybrid_pct,
+        max(try_to_date(left(_loaded_at::varchar, 10)))                   as last_fetch_date
+    FROM STAGING.STG_ADZUNA_POSTINGS
+""")
 
 # ── Top header ────────────────────────────────────────────────────────────
 hcol1, hcol2 = st.columns([3, 1])
@@ -271,6 +283,8 @@ top_pay_row = roles_f.sort_values("MEDIAN_SALARY", ascending=False).iloc[0] if n
 top_pay     = top_pay_row["ROLE_CLUSTER"] if top_pay_row is not None else "—"
 top_pay_sal = int(top_pay_row["MEDIAN_SALARY"]) if top_pay_row is not None else 0
 n_postings  = int(roles_f["POSTING_COUNT"].sum()) if not roles_f.empty else 0
+remote_pct  = float(remote_df["REMOTE_PCT"].iloc[0]) if not remote_df.empty else 0
+last_fetch  = str(remote_df["LAST_FETCH_DATE"].iloc[0]) if not remote_df.empty else "—"
 
 
 # ══════════════════════════════════════════════════════════════════════════
@@ -291,8 +305,8 @@ if page == "Market Overview":
         <div class="kpi-lbl">Median Salary</div>
       </div>
       <div class="kpi" style="border-top-color:{C['emerald']}">
-        <div class="kpi-val">{top_role}</div>
-        <div class="kpi-lbl">Highest Volume Role</div>
+        <div class="kpi-val">{remote_pct:.0f}%</div>
+        <div class="kpi-lbl">Remote / Hybrid Available</div>
       </div>
       <div class="kpi" style="border-top-color:{C['rose']}">
         <div class="kpi-val">{top_pay}</div>
@@ -414,6 +428,30 @@ if page == "Market Overview":
             top10["Salary"] = top10["Salary"].apply(lambda x: f"${int(x)//1000}k" if pd.notna(x) and x > 0 else "—")
             top10["Jobs"]   = top10["Jobs"].apply(lambda x: f"{int(x):,}")
             st.dataframe(top10, use_container_width=True, hide_index=True, height=340)
+
+    st.markdown('<hr class="divider">', unsafe_allow_html=True)
+    st.markdown(f"""
+    <div style="background:{C['surface']};border:1px solid {C['border']};border-radius:6px;padding:0.9rem 1.2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.8rem">
+      <div style="display:flex;align-items:center;gap:0.6rem">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block;box-shadow:0 0 6px #10b981"></span>
+        <span style="font-size:0.72rem;font-weight:600;color:{C['heading']}">Live Pipeline</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.68rem;color:{C['muted']}">
+        <span style="color:{C['accent']}">Adzuna API</span>
+        <span>→</span>
+        <span>Snowflake RAW</span>
+        <span>→</span>
+        <span>dbt transforms</span>
+        <span>→</span>
+        <span style="color:{C['accent']}">Dashboard</span>
+      </div>
+      <div style="font-size:0.68rem;color:{C['muted']}">
+        Last fetch <span style="color:{C['text']}">{last_fetch}</span>
+        &nbsp;·&nbsp; Refreshes daily at 14:00 CST
+        &nbsp;·&nbsp; <span style="color:{C['text']}">{int(remote_df['TOTAL_COUNT'].iloc[0]):,}</span> live records
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 # ══════════════════════════════════════════════════════════════════════════

@@ -11,6 +11,7 @@ cleaned as (
         trim(TITLE)                                          as job_title,
         trim(DESCRIPTION)                                    as description,
         trim(LOCATION)                                       as location,
+        trim(STATE)                                          as state_code,
         SALARY_MIN::float                                    as min_salary,
         SALARY_MAX::float                                    as max_salary,
         SALARY_EST::float                                    as med_salary,

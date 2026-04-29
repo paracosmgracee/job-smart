@@ -487,6 +487,14 @@ elif page == "Skills":
         scatter_df["size"]  = scatter_df["JOB_COUNT"].apply(lambda x: max(8, min(40, x / 50)))
         scatter_df["label"] = scatter_df["SKILL"].str.title()
 
+        # Only label the 12 most prominent skills (highest job count + extreme salary outliers)
+        top_by_count = set(scatter_df.nlargest(8, "JOB_COUNT").index)
+        top_by_salary = set(scatter_df.nlargest(4, "MEDIAN_SALARY").index)
+        label_idx = top_by_count | top_by_salary
+        scatter_df["text_label"] = scatter_df.apply(
+            lambda r: r["label"] if r.name in label_idx else "", axis=1
+        )
+
         st.markdown('<div class="sec">Demand vs. Salary</div>', unsafe_allow_html=True)
         fig = px.scatter(
             scatter_df,
@@ -495,11 +503,11 @@ elif page == "Skills":
             color="MEDIAN_SALARY",
             color_continuous_scale=[[0, "#1e1e3a"], [0.5, "#4f46e5"], [1, "#f59e0b"]],
             hover_name="label",
-            hover_data={"JOB_COUNT": True, "MEDIAN_SALARY": True, "size": False},
+            hover_data={"JOB_COUNT": True, "MEDIAN_SALARY": True, "size": False, "text_label": False},
             labels={"JOB_COUNT": "Job Postings", "MEDIAN_SALARY": "Median Annual Salary ($)"},
-            text="label",
+            text="text_label",
         )
-        fig.update_traces(textposition="top center", textfont_size=9)
+        fig.update_traces(textposition="top center", textfont_size=10)
         med_x = scatter_df["JOB_COUNT"].median()
         med_y = scatter_df["MEDIAN_SALARY"].median()
         fig.add_hline(y=med_y, line_dash="dot", line_color=C["muted"], opacity=0.5)
@@ -508,7 +516,7 @@ elif page == "Skills":
             coloraxis_showscale=False,
             yaxis=dict(tickformat="$,.0f", showgrid=True, gridcolor=C["border"]),
             xaxis=dict(showgrid=True, gridcolor=C["border"]),
-            height=440, **CHART,
+            height=460, **CHART,
         )
         st.plotly_chart(fig, use_container_width=True)
 

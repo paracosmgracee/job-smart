@@ -235,12 +235,20 @@ remote_df      = q(conn, """
         max(try_to_date(left(_loaded_at::varchar, 10)))                   as last_fetch_date
     FROM STAGING.STG_ADZUNA_POSTINGS
 """)
+salary_cov_df  = q(conn, """
+    SELECT
+        count_if(annual_salary_est is not null)                           as with_salary,
+        count(*)                                                          as total,
+        round(count_if(annual_salary_est is not null) * 100.0
+              / nullif(count(*), 0), 0)                                   as salary_coverage_pct
+    FROM STAGING.STG_ALL_POSTINGS
+""")
 
 # ── Top header ────────────────────────────────────────────────────────────
 hcol1, hcol2 = st.columns([3, 1])
 with hcol1:
     st.markdown('<div style="font-size:1.15rem;font-weight:700;color:#f0f0f8;letter-spacing:-0.02em;margin-bottom:0.1rem">Job Market Intelligence</div>', unsafe_allow_html=True)
-    st.markdown('<div style="font-size:0.72rem;color:#3a3a50;margin-bottom:1rem">2023 – 2026 · US Tech</div>', unsafe_allow_html=True)
+    st.markdown('<div style="font-size:0.72rem;color:#3a3a50;margin-bottom:1rem">2025 – 2026 · US Tech · Live</div>', unsafe_allow_html=True)
 with hcol2:
     all_roles = sorted(roles_df["ROLE_CLUSTER"].dropna().unique().tolist()) if not roles_df.empty else []
     sel_role = st.selectbox("Role", ["All Roles"] + all_roles, label_visibility="collapsed")
@@ -283,8 +291,9 @@ top_pay_row = roles_f.sort_values("MEDIAN_SALARY", ascending=False).iloc[0] if n
 top_pay     = top_pay_row["ROLE_CLUSTER"] if top_pay_row is not None else "—"
 top_pay_sal = int(top_pay_row["MEDIAN_SALARY"]) if top_pay_row is not None else 0
 n_postings  = int(roles_f["POSTING_COUNT"].sum()) if not roles_f.empty else 0
-remote_pct  = float(remote_df["REMOTE_PCT"].iloc[0]) if not remote_df.empty else 0
-last_fetch  = str(remote_df["LAST_FETCH_DATE"].iloc[0]) if not remote_df.empty else "—"
+remote_pct    = float(remote_df["REMOTE_PCT"].iloc[0]) if not remote_df.empty else 0
+last_fetch    = str(remote_df["LAST_FETCH_DATE"].iloc[0]) if not remote_df.empty else "—"
+salary_cov    = int(salary_cov_df["SALARY_COVERAGE_PCT"].iloc[0]) if not salary_cov_df.empty else 0
 
 
 # ══════════════════════════════════════════════════════════════════════════
@@ -311,6 +320,10 @@ if page == "Market Overview":
       <div class="kpi" style="border-top-color:{C['rose']}">
         <div class="kpi-val">{top_pay}</div>
         <div class="kpi-lbl">Highest Paying · ${top_pay_sal//1000}k</div>
+      </div>
+      <div class="kpi" style="border-top-color:{C['muted']}">
+        <div class="kpi-val">{salary_cov}%</div>
+        <div class="kpi-lbl">Salary Data Coverage</div>
       </div>
     </div>
     """, unsafe_allow_html=True)

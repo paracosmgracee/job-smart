@@ -3,7 +3,7 @@ name: Daily Job Fetch
 on:
   schedule:
     - cron: '0 7 * * *'   # 每天 UTC 7:00 (LA 时间 00:00 PDT)
-  workflow_dispatch:        # 也可以手动触发
+  workflow_dispatch:
 
 jobs:
   fetch:
@@ -21,6 +21,7 @@ jobs:
         run: pip install requests pandas "snowflake-connector-python[pandas]" python-dotenv dbt-snowflake
 
       - name: Run Adzuna fetch
+        id: adzuna
         env:
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_API_KEY: ${{ secrets.ADZUNA_API_KEY }}
@@ -30,9 +31,10 @@ jobs:
           SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
           SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
           SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
-        run: python scripts/fetch_adzuna.py
+        run: python scripts/fetch_adzuna.py 2>&1 | tee /tmp/adzuna.log
 
       - name: Run JSearch fetch
+        id: jsearch
         env:
           JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
@@ -41,9 +43,10 @@ jobs:
           SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
           SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
           SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
-        run: python scripts/fetch_jsearch.py
+        run: python scripts/fetch_jsearch.py 2>&1 | tee /tmp/jsearch.log
 
       - name: Run dbt transforms
+        id: dbt
         env:
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
@@ -52,3 +55,27 @@ jobs:
           SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
           SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
         run: cd dbt_project && dbt run --select stg_jsearch_postings stg_adzuna_postings stg_all_postings+
+
+      - name: Run dbt tests
+        env:
+          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+          SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+          SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+          SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+        run: cd dbt_project && dbt test --select stg_adzuna_postings stg_jsearch_postings
+
+      - name: Post job summary
+        if: always()
+        run: |
+          ADZUNA_ROWS=$(grep "rows inserted" /tmp/adzuna.log | grep -o '[0-9,]*' | tr -d ',' | tail -1 || echo "0")
+          JSEARCH_ROWS=$(grep "rows inserted" /tmp/jsearch.log | grep -o '[0-9,]*' | tr -d ',' | tail -1 || echo "0")
+          echo "## Daily Job Fetch — $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Source | Rows inserted |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|--------------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Adzuna | ${ADZUNA_ROWS:-0} |" >> $GITHUB_STEP_SUMMARY
+          echo "| JSearch | ${JSEARCH_ROWS:-0} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "dbt run + tests completed." >> $GITHUB_STEP_SUMMARY

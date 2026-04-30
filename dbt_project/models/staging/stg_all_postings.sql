@@ -1,5 +1,5 @@
--- All live job postings: Adzuna + JSearch (Indeed/LinkedIn via RapidAPI)
--- Deduped by company + title + date to handle cross-source overlap
+-- All live job postings: Adzuna + JSearch + Target Company Portals
+-- Deduped by company + title + date; salary-bearing records preferred
 with adzuna as (
     select * from {{ ref('stg_adzuna_postings') }}
 ),
@@ -8,10 +8,16 @@ jsearch as (
     select * from {{ ref('stg_jsearch_postings') }}
 ),
 
+portals as (
+    select * from {{ ref('stg_portal_postings') }}
+),
+
 unioned as (
     select * from adzuna
     union all
     select * from jsearch
+    union all
+    select * from portals
 ),
 
 deduped as (
@@ -22,7 +28,6 @@ deduped as (
                 lower(trim(job_title)),
                 date(listed_at)
             order by
-                -- prefer records with salary data, then by source
                 case when annual_salary_est is not null then 0 else 1 end,
                 source
         ) as rn

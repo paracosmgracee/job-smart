@@ -45,6 +45,16 @@ jobs:
           SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
         run: python scripts/fetch_jsearch.py 2>&1 | tee /tmp/jsearch.log
 
+      - name: Run portal fetch (Greenhouse/Ashby target companies)
+        env:
+          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+          SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+          SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+          SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+        run: python scripts/fetch_portals.py
+
       - name: Run dbt transforms
         id: dbt
         env:
@@ -54,7 +64,7 @@ jobs:
           SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
           SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
           SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
-        run: cd dbt_project && dbt run --select stg_jsearch_postings stg_adzuna_postings stg_all_postings+
+        run: cd dbt_project && dbt run --select stg_portal_postings stg_jsearch_postings stg_adzuna_postings stg_all_postings+
 
       - name: Run dbt tests
         env:

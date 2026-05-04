@@ -76,6 +76,22 @@ jobs:
           SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
         run: cd dbt_project && dbt test --select stg_adzuna_postings stg_jsearch_postings
 
+      - name: Run healthcare portal scan + email digest
+        env:
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: python scripts/fetch_healthcare.py
+
+      - name: Commit dedup history
+        run: |
+          git config user.name "job-smart-bot"
+          git config user.email "actions@github.com"
+          git add data/healthcare_seen_urls.txt || true
+          git diff --cached --quiet || git commit -m "chore: update healthcare seen URLs [skip ci]"
+          git push || true
+
       - name: Post job summary
         if: always()
         run: |

@@ -343,9 +343,9 @@ if page == "Market Overview":
                     labels={"POSTING_COUNT": "Postings", "ROLE_CLUSTER": "", "MEDIAN_SALARY": "Median Salary"},
                     text="POSTING_COUNT",
                 )
-                fig.update_traces(texttemplate="%{text:,}", textposition="outside", textfont_size=10)
-                fig.update_layout(coloraxis_showscale=False, height=320, **CHART)
-                fig.update_xaxes(showgrid=False, showticklabels=False)
+                fig.update_traces(texttemplate="%{text:,}", textposition="outside", textfont_size=10, cliponaxis=False)
+                fig.update_layout(coloraxis_showscale=False, height=320, **{**CHART, "margin": dict(l=10, r=55, t=40, b=10)})
+                fig.update_xaxes(showgrid=False, showticklabels=False, range=[0, roles_f["POSTING_COUNT"].max() * 1.18])
                 fig.update_yaxes(showgrid=False)
                 st.plotly_chart(fig, use_container_width=True, config=NO_BAR_CFG)
 
@@ -361,9 +361,9 @@ if page == "Market Overview":
                     labels={"MEDIAN_SALARY": "Median Salary ($)", "ROLE_CLUSTER": ""},
                     text="sal_fmt",
                 )
-                fig.update_traces(textposition="outside", textfont_size=10, marker_line_width=0)
-                fig.update_layout(coloraxis_showscale=False, height=320, **CHART)
-                fig.update_xaxes(showgrid=False, showticklabels=False)
+                fig.update_traces(textposition="outside", textfont_size=10, marker_line_width=0, cliponaxis=False)
+                fig.update_layout(coloraxis_showscale=False, height=320, **{**CHART, "margin": dict(l=10, r=55, t=40, b=10)})
+                fig.update_xaxes(showgrid=False, showticklabels=False, range=[0, sal_roles["MEDIAN_SALARY"].max() * 1.18])
                 fig.update_yaxes(showgrid=False)
                 st.plotly_chart(fig, use_container_width=True, config=NO_BAR_CFG)
 
@@ -489,8 +489,8 @@ elif page == "Compensation":
 
     st.markdown('<div class="sec">Salary by Role & Seniority</div>', unsafe_allow_html=True)
     SEN_ORDER  = ["Entry Level", "Mid Level", "Senior", "Staff/Lead", "Principal"]
-    SEN_COLORS = {"Entry Level": "#10b981", "Mid Level": "#4f46e5",
-                  "Senior": "#f59e0b", "Staff/Lead": "#f43f5e", "Principal": "#8b5cf6"}
+    SEN_COLORS = {"Entry Level": "#c4b5fd", "Mid Level": "#a78bfa",
+                  "Senior": "#7c3aed", "Staff/Lead": "#5b21b6", "Principal": "#3b0764"}
     sel_sen = st.multiselect("Seniority levels", SEN_ORDER, default=SEN_ORDER, label_visibility="collapsed")
 
     if not role_sen_f.empty:

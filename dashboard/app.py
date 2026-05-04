@@ -489,8 +489,8 @@ elif page == "Compensation":
 
     st.markdown('<div class="sec">Salary by Role & Seniority</div>', unsafe_allow_html=True)
     SEN_ORDER  = ["Entry Level", "Mid Level", "Senior", "Staff/Lead", "Principal"]
-    SEN_COLORS = {"Entry Level": "#c4b5fd", "Mid Level": "#a78bfa",
-                  "Senior": "#7c3aed", "Staff/Lead": "#5b21b6", "Principal": "#3b0764"}
+    SEN_COLORS = {"Entry Level": "#93c5fd", "Mid Level": "#60a5fa",
+                  "Senior": "#3b82f6", "Staff/Lead": "#1d4ed8", "Principal": "#1e3a8a"}
     sel_sen = st.multiselect("Seniority levels", SEN_ORDER, default=SEN_ORDER, label_visibility="collapsed")
 
     if not role_sen_f.empty:

@@ -1,6 +1,8 @@
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B0386011E281C86E6FBD6C552BCA4__es-mx
 https://careers.hcahealthcare.com/jobs/17129915-medication-management-data-analyst
+https://careers.hcahealthcare.com/jobs/17707968-division-nursing-clinical-data-analyst
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
+https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-healthcare-claims-and-remittance-remote/34088/94855104208
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-ii-ifp/34088/94751131184
@@ -16,5 +18,8 @@ https://jobs.centene.com/us/en/jobs/1634216/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1634221/data-analyst-iv-healthcare-analytics-medical-economics/
 https://jobs.centene.com/us/en/jobs/1634956/data-analyst-ii-sql-power-bi-ms-access/
 https://jobs.centene.com/us/en/jobs/1636120/data-analyst-iii-healthcare-analytics/
+https://jobs.centene.com/us/en/jobs/1636874/data-analyst-iii-healthcare-analytics-provider-analytics/
+https://jobs.centene.com/us/en/jobs/1638324/data-analyst-iv-advanced-sql/
 https://jobs.centene.com/us/en/jobs/1638556/data-engineer-ii/
+https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976
 https://usccareers.usc.edu/job/san-diego/business-data-analyst/1209/93159747552

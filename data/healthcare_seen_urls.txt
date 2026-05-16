@@ -1,4 +1,5 @@
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B0386011E281C86E6FBD6C552BCA4__es-mx
+https://careers.hcahealthcare.com/en/jobs/17714301-consulting-business-intelligence-developer?tm_job=1-INFOR-4531989&tm_event=view&tm_company=2537
 https://careers.hcahealthcare.com/jobs/17129915-medication-management-data-analyst
 https://careers.hcahealthcare.com/jobs/17707968-division-nursing-clinical-data-analyst
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
@@ -7,12 +8,17 @@ https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operatio
 https://careers.unitedhealthgroup.com/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-healthcare-claims-and-remittance-remote/34088/94855104208
+https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-operational-optimization-and-workforce-strategy/34088/95024674848
 https://careers.unitedhealthgroup.com/job/eden-prairie/financial-data-analyst-remote/34088/95024674704
 https://careers.unitedhealthgroup.com/job/little-rock/sr-data-analyst-hybrid-in-office-remote/34088/94073988000
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/94236484704
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/94946390208
+https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove-provider-experience/34088/95043544192
+https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove/34088/95043544384
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-ii-ifp/34088/94751131184
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-ii-uhc-cove/34088/95043544432
+https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-uhc-cove-strategic-enablement/34088/95108583552
+https://careers.unitedhealthgroup.com/job/minnetonka/data-scientist/34088/93191508416
 https://careers.unitedhealthgroup.com/job/noida/associate-data-analyst/34088/94681101344
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/94714266112
 https://careers.unitedhealthgroup.com/job/noida/data-scientist-1/34088/94675598192

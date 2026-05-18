@@ -8,8 +8,11 @@ https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operatio
 https://careers.unitedhealthgroup.com/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-healthcare-claims-and-remittance-remote/34088/94855104208
+https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-2/34088/93191508912
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-operational-optimization-and-workforce-strategy/34088/95024674848
 https://careers.unitedhealthgroup.com/job/eden-prairie/financial-data-analyst-remote/34088/95024674704
+https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/94425248352
+https://careers.unitedhealthgroup.com/job/hyderabad/sr-data-analyst/34088/95077360400
 https://careers.unitedhealthgroup.com/job/little-rock/sr-data-analyst-hybrid-in-office-remote/34088/94073988000
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/94236484704
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/94946390208
@@ -35,6 +38,7 @@ https://jobs.centene.com/us/en/jobs/1635734/data-engineer-ii/
 https://jobs.centene.com/us/en/jobs/1636120/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1636874/data-analyst-iii-healthcare-analytics-provider-analytics/
 https://jobs.centene.com/us/en/jobs/1638324/data-analyst-iv-advanced-sql/
+https://jobs.centene.com/us/en/jobs/1638373/data-analyst-iii-healthcare-analytics-provider-analytics/
 https://jobs.centene.com/us/en/jobs/1638556/data-engineer-ii/
 https://jobs.centene.com/us/en/jobs/1639314/business-analyst-ii-claims-amisys/
 https://jobs.centene.com/us/en/jobs/1639327/business-analyst-ii-implementation-support-uat-cm/

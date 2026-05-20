@@ -35,6 +35,7 @@ https://jobs.centene.com/us/en/jobs/1634216/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1634221/data-analyst-iv-healthcare-analytics-medical-economics/
 https://jobs.centene.com/us/en/jobs/1634956/data-analyst-ii-sql-power-bi-ms-access/
 https://jobs.centene.com/us/en/jobs/1635734/data-engineer-ii/
+https://jobs.centene.com/us/en/jobs/1636010/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1636120/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1636874/data-analyst-iii-healthcare-analytics-provider-analytics/
 https://jobs.centene.com/us/en/jobs/1638324/data-analyst-iv-advanced-sql/

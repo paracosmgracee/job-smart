@@ -1,7 +1,6 @@
 """
 Fetch jobs from target companies via Greenhouse / Ashby public APIs.
-Zero API keys needed — these endpoints are publicly accessible.
-Source: career-ops/portals.yml (companies with api: field)
+No auth needed. Company list comes from ~/career-ops/portals.yml.
 """
 import os, time, requests, yaml, hashlib, pandas as pd, snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
@@ -104,10 +103,9 @@ def load_targets() -> list[dict]:
     try:
         with open(PORTALS_YML) as f:
             raw = f.read()
-        # portals.yml has a non-standard structure — parse company blocks manually
+        # portals.yml isn't standard YAML (mixed list formats), parse manually
         import re
         targets = []
-        # Match entries with both name and api fields
         blocks = re.findall(
             r'- name: (.+?)\n.*?api: (https://[^\n]+)',
             raw, re.DOTALL

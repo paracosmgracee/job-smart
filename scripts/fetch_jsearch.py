@@ -1,7 +1,6 @@
 """
-Fetch job data from JSearch API (RapidAPI) — scrapes Indeed + LinkedIn.
-Free tier: 200 requests/month. Run monthly for historical backfill,
-or daily for ~6 queries/day to stay within limits.
+Fetch job postings from JSearch (RapidAPI) — pulls from Indeed + LinkedIn.
+Runs daily via GitHub Actions. Hard limit is 200 req/month so keep PAGES_PER_QUERY low.
 """
 import os, time, requests, pandas as pd, snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
@@ -28,8 +27,7 @@ QUERIES = [
     "software engineer data",
 ]
 
-PAGES_PER_QUERY = 3   # 10 results/page × 3 pages = 30 per query
-                       # 8 queries × 3 pages = 24 requests/run — well within 200/month
+PAGES_PER_QUERY = 3   # 8 queries × 3 pages = 24 req/run, leaves buffer for reruns
 
 
 def fetch_jobs(query: str, page: int) -> list[dict]:
@@ -47,12 +45,10 @@ def fetch_jobs(query: str, page: int) -> list[dict]:
 
 
 def parse_job(job: dict, query: str) -> dict:
-    # salary: JSearch returns structured min/max/period
     s_min  = job.get("job_min_salary")
     s_max  = job.get("job_max_salary")
     period = (job.get("job_salary_period") or "").upper()
 
-    # annualize if hourly
     def annualize(v):
         if v is None:
             return None

@@ -1,6 +1,6 @@
 """
-Upload raw CSVs to Snowflake RAW schema.
-Run once after download_data.py.
+One-time loader for the static LinkedIn dataset (data/raw/).
+Run this manually if you need to reload the historical baseline.
 """
 import os
 import pandas as pd
@@ -13,7 +13,6 @@ load_dotenv()
 
 RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
 
-# Actual file paths from the Kaggle dataset structure
 TABLES = {
     "postings.csv": "JOB_POSTINGS",
     "jobs/job_skills.csv": "JOB_SKILLS",

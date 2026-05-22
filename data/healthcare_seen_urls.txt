@@ -1,3 +1,5 @@
+https://careers.elevancehealth.com/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487
+https://careers.elevancehealth.com/es-mx/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B0386011E281C86E6FBD6C552BCA4__es-mx
 https://careers.hcahealthcare.com/en/jobs/17714301-consulting-business-intelligence-developer?tm_job=1-INFOR-4531989&tm_event=view&tm_company=2537
 https://careers.hcahealthcare.com/jobs/17129915-medication-management-data-analyst
@@ -42,6 +44,7 @@ https://jobs.centene.com/us/en/jobs/1635734/data-engineer-ii/
 https://jobs.centene.com/us/en/jobs/1636010/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1636120/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1636874/data-analyst-iii-healthcare-analytics-provider-analytics/
+https://jobs.centene.com/us/en/jobs/1638135/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1638324/data-analyst-iv-advanced-sql/
 https://jobs.centene.com/us/en/jobs/1638373/data-analyst-iii-healthcare-analytics-provider-analytics/
 https://jobs.centene.com/us/en/jobs/1638556/data-engineer-ii/

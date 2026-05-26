@@ -4,6 +4,7 @@ Pulls multiple role queries, deduplicates by job ID, then upserts.
 """
 import os, time, requests, pandas as pd, snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
+from cryptography.hazmat.primitives import serialization
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 
@@ -65,10 +66,18 @@ def parse_job(job: dict, query: str) -> dict:
 
 
 def get_conn():
+    pk = serialization.load_pem_private_key(
+        os.environ["SNOWFLAKE_PRIVATE_KEY"].encode(), password=None
+    )
+    pk_bytes = pk.private_bytes(
+        serialization.Encoding.DER,
+        serialization.PrivateFormat.PKCS8,
+        serialization.NoEncryption(),
+    )
     return snowflake.connector.connect(
         account=os.environ["SNOWFLAKE_ACCOUNT"],
         user=os.environ["SNOWFLAKE_USER"],
-        password=os.environ["SNOWFLAKE_PASSWORD"],
+        private_key=pk_bytes,
         database=os.environ["SNOWFLAKE_DATABASE"],
         warehouse=os.environ["SNOWFLAKE_WAREHOUSE"],
         role=os.environ["SNOWFLAKE_ROLE"],

@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import snowflake.connector
+from cryptography.hazmat.primitives import serialization
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -187,10 +188,18 @@ div[data-testid="stPills"] {{
 
 # ── Snowflake ──────────────────────────────────────────────────────────────
 def _new_conn():
+    pk = serialization.load_pem_private_key(
+        _secret("SNOWFLAKE_PRIVATE_KEY").encode(), password=None
+    )
+    pk_bytes = pk.private_bytes(
+        serialization.Encoding.DER,
+        serialization.PrivateFormat.PKCS8,
+        serialization.NoEncryption(),
+    )
     return snowflake.connector.connect(
         account=_secret("SNOWFLAKE_ACCOUNT"),
         user=_secret("SNOWFLAKE_USER"),
-        password=_secret("SNOWFLAKE_PASSWORD"),
+        private_key=pk_bytes,
         database=_secret("SNOWFLAKE_DATABASE"),
         warehouse=_secret("SNOWFLAKE_WAREHOUSE"),
         role=_secret("SNOWFLAKE_ROLE"),

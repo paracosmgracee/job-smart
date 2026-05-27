@@ -6,6 +6,7 @@ https://careers.elevancehealth.com/population-health-data-analyst-sr/job/15A7101
 https://careers.hcahealthcare.com/en/jobs/17714301-consulting-business-intelligence-developer?tm_job=1-INFOR-4531989&tm_event=view&tm_company=2537
 https://careers.hcahealthcare.com/jobs/17129915-medication-management-data-analyst
 https://careers.hcahealthcare.com/jobs/17707968-division-nursing-clinical-data-analyst
+https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
 https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
 https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operations/34088/94973583216
@@ -33,6 +34,7 @@ https://careers.unitedhealthgroup.com/job/minnetonka/data-scientist/34088/931915
 https://careers.unitedhealthgroup.com/job/noida/associate-data-analyst/34088/94681101344
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/94714266112
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95574159424
+https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95609138304
 https://careers.unitedhealthgroup.com/job/noida/data-scientist-1/34088/94675598192
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/94832174176
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95574159552
@@ -49,6 +51,7 @@ https://jobs.centene.com/us/en/jobs/1635734/data-engineer-ii/
 https://jobs.centene.com/us/en/jobs/1636010/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1636120/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1636874/data-analyst-iii-healthcare-analytics-provider-analytics/
+https://jobs.centene.com/us/en/jobs/1637986/business-analyst-ii-integration-quality-user-acceptance-testing-ltss/
 https://jobs.centene.com/us/en/jobs/1638135/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1638324/data-analyst-iv-advanced-sql/
 https://jobs.centene.com/us/en/jobs/1638373/data-analyst-iii-healthcare-analytics-provider-analytics/

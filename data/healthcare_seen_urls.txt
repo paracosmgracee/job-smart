@@ -4,6 +4,7 @@ https://careers.elevancehealth.com/es-mx/population-health-data-analyst-sr/job/1
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B0386011E281C86E6FBD6C552BCA4__es-mx
 https://careers.elevancehealth.com/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D
 https://careers.hcahealthcare.com/en/jobs/17714301-consulting-business-intelligence-developer?tm_job=1-INFOR-4531989&tm_event=view&tm_company=2537
+https://careers.hcahealthcare.com/en/jobs/17774455-data-integrity-and-quality-analyst-ii?tm_job=1-INFOR-4543517&tm_event=view&tm_company=2537
 https://careers.hcahealthcare.com/jobs/17129915-medication-management-data-analyst
 https://careers.hcahealthcare.com/jobs/17707968-division-nursing-clinical-data-analyst
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
@@ -19,7 +20,10 @@ https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-2/34088/93
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-operational-optimization-and-workforce-strategy/34088/95024674848
 https://careers.unitedhealthgroup.com/job/eden-prairie/financial-data-analyst-remote/34088/95024674704
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/94425248352
+https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/95648974624
+https://careers.unitedhealthgroup.com/job/gurgaon/data-scientist/34088/95648974656
 https://careers.unitedhealthgroup.com/job/hyderabad/data-analyst-2/34088/95272481136
+https://careers.unitedhealthgroup.com/job/hyderabad/data-scientist/34088/95580204048
 https://careers.unitedhealthgroup.com/job/hyderabad/sr-data-analyst/34088/95077360400
 https://careers.unitedhealthgroup.com/job/little-rock/sr-data-analyst-hybrid-in-office-remote/34088/94073988000
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/94236484704
@@ -39,6 +43,8 @@ https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95609138304
 https://careers.unitedhealthgroup.com/job/noida/data-scientist-1/34088/94675598192
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/94832174176
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95574159552
+https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95612494384
+https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95691240752
 https://careers.unitedhealthgroup.com/job/pearland/sr-value-based-healthcare-data-analyst-kelsey-seybold-pearland-tx/34088/95338508208
 https://careers.unitedhealthgroup.com/job/plymouth/business-data-analyst-remote/34088/88184223040
 https://it.uclahealth.org/about/ohia
@@ -47,6 +53,7 @@ https://jobs.centene.com/us/en/jobs/1632554/210024-data-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1633622/business-analyst-ii-provider-data-operations/
 https://jobs.centene.com/us/en/jobs/1634216/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1634221/data-analyst-iv-healthcare-analytics-medical-economics/
+https://jobs.centene.com/us/en/jobs/1634946/data-analyst-iv-provider-data-sql/
 https://jobs.centene.com/us/en/jobs/1634956/data-analyst-ii-sql-power-bi-ms-access/
 https://jobs.centene.com/us/en/jobs/1635734/data-engineer-ii/
 https://jobs.centene.com/us/en/jobs/1636010/data-analyst-iii-healthcare-analytics/

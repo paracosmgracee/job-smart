@@ -1,5 +1,4 @@
--- Technical skill demand broken down by role cluster
--- Enables role-specific skill filtering in the dashboard
+-- skill frequency per role cluster
 with tech_skills as (
     select trim(value::string) as skill
     from table(flatten(input => parse_json('[

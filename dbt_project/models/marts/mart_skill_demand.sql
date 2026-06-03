@@ -1,5 +1,4 @@
--- Top skills by demand: how many jobs require each skill
--- Used by: dashboard skill trends chart, resume gap analysis
+-- skill demand from kaggle job_skills table (static, not from live feed)
 with skills as (
     select * from {{ ref('stg_job_skills') }}
 ),

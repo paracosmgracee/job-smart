@@ -1,4 +1,4 @@
--- Median salary by company tier (FAANG+ / Scale-up / Enterprise / Mid-market / Startup)
+-- salary by company tier — tier assigned by regex on company name
 with classified as (
     select
         annual_salary_est,

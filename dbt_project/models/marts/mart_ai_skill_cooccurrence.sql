@@ -1,5 +1,4 @@
--- Skills that co-occur with AI/LLM job requirements
--- Shows which skills appear most in jobs that mention AI/LLM keywords
+-- which skills show up alongside LLM/AI requirements
 with tech_skills as (
     select trim(value::string) as skill
     from table(flatten(input => parse_json('[

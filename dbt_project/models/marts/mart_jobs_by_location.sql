@@ -1,5 +1,4 @@
--- Job demand and salary by US state
--- Normalizes both full state names (Adzuna) and 2-letter codes (JSearch)
+-- adzuna gives full state names, jsearch gives 2-letter codes — normalize both here
 with jobs as (
     select
         job_id,
@@ -27,7 +26,6 @@ normalized as (
         role_cluster,
         annual_salary_est,
         case trim(state_code)
-            -- full names → 2-letter (Adzuna format)
             when 'Alabama' then 'AL' when 'Alaska' then 'AK'
             when 'Arizona' then 'AZ' when 'Arkansas' then 'AR'
             when 'California' then 'CA' when 'Colorado' then 'CO'
@@ -54,8 +52,7 @@ normalized as (
             when 'Washington' then 'WA' when 'West Virginia' then 'WV'
             when 'Wisconsin' then 'WI' when 'Wyoming' then 'WY'
             when 'District of Columbia' then 'DC'
-            -- already 2-letter (JSearch format) — pass through
-            else upper(trim(state_code))
+            else upper(trim(state_code))  -- jsearch already sends 2-letter
         end as state_code_2
     from jobs
 )

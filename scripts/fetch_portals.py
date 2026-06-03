@@ -1,7 +1,5 @@
-"""
-Fetch jobs from target companies via Greenhouse / Ashby public APIs.
-No auth needed. Company list comes from ~/career-ops/portals.yml.
-"""
+# Greenhouse / Ashby public APIs → RAW.PORTAL_POSTINGS
+# no auth needed — both ATS platforms expose job boards publicly
 import os, time, requests, yaml, hashlib, pandas as pd, snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
 from cryptography.hazmat.primitives import serialization

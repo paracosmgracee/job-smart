@@ -1,4 +1,4 @@
--- Salary by seniority level across all roles
+-- salary distribution by seniority (EN/MI/SE/EX/DI mapped from title)
 with jobs as (
     select * from {{ ref('stg_all_postings') }}
     where annual_salary_est > 20000

@@ -1,4 +1,4 @@
--- Target company job postings via Greenhouse/Ashby public APIs (zero API key)
+-- no salary from Greenhouse/Ashby — their public APIs don't expose it
 with source as (
     select * from {{ source('raw', 'PORTAL_POSTINGS') }}
 ),

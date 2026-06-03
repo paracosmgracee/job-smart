@@ -1,5 +1,4 @@
--- Extract technical skill mentions from job descriptions via keyword matching
--- Cross-joins a predefined skill list against job descriptions using ILIKE
+-- keyword match against desc — cross join is heavy but runs once a day so fine
 with tech_skills as (
     select trim(value::string) as skill
     from table(flatten(input => parse_json('[

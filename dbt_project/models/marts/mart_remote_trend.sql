@@ -1,4 +1,4 @@
--- Remote vs Hybrid vs On-site trend over time (monthly %)
+-- remote/onsite share by month
 with jobs as (
     select
         date_trunc('month', listed_at)  as month,

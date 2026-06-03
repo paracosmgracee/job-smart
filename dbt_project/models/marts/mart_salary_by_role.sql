@@ -1,12 +1,10 @@
--- Salary distribution by job title cluster
--- Powers the salary analysis dashboard panel
+-- salary percentiles by role cluster
 with jobs as (
     select * from {{ ref('stg_all_postings') }}
-    where annual_salary_est > 10000  -- filter out bad data
+    where annual_salary_est > 10000  -- obvious data entry errors below this
       and annual_salary_est < 1000000
 ),
 
--- Normalize common title variants into clusters
 title_clusters as (
     select
         job_id,

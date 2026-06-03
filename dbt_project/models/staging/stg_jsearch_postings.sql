@@ -1,5 +1,4 @@
--- Cleaned and typed view over JSearch postings (Indeed + LinkedIn via RapidAPI)
--- Salary already annualized by fetch_jsearch.py; experience_level/work_type inferred from title
+-- salary annualized upstream in fetch_jsearch.py (HOUR×2080 / WEEK×52 / MONTH×12)
 with source as (
     select * from {{ source('raw', 'JSEARCH_POSTINGS') }}
 ),

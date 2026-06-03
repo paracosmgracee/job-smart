@@ -1,5 +1,4 @@
--- All live job postings: Adzuna + JSearch + Target Company Portals
--- Deduped by company + title + date; salary-bearing records preferred
+-- union all three sources, keep the salary-bearing record when dupes exist
 with adzuna as (
     select * from {{ ref('stg_adzuna_postings') }}
 ),

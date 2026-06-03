@@ -1,4 +1,4 @@
--- Salary by role cluster AND seniority (for grouped bar chart)
+-- role × seniority salary breakdown
 with jobs as (
     select * from {{ ref('stg_all_postings') }}
     where annual_salary_est > 20000

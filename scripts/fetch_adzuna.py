@@ -1,7 +1,4 @@
-"""
-Fetch live job data from Adzuna API and append to Snowflake RAW.ADZUNA_POSTINGS
-Pulls multiple role queries, deduplicates by job ID, then upserts.
-"""
+# Adzuna → Snowflake RAW.ADZUNA_POSTINGS
 import os, time, requests, pandas as pd, snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
 from cryptography.hazmat.primitives import serialization
@@ -20,9 +17,9 @@ QUERIES = [
     "analytics engineer", "business intelligence", "llm engineer",
 ]
 
-PAGES_PER_QUERY = 10  # 50 results/page × 10 pages = 500 per role (Adzuna max)
+PAGES_PER_QUERY = 10  # 500 results max per role
 RESULTS_PER_PAGE = 50
-MAX_DAYS_OLD = 30     # pull postings up to 30 days old
+MAX_DAYS_OLD = 30
 
 
 def fetch_jobs(query: str, page: int) -> list[dict]:
@@ -97,7 +94,7 @@ def main():
                     break
                 all_jobs.extend([parse_job(j, query) for j in jobs])
                 print(f"  page {page}: {len(jobs)} jobs")
-                time.sleep(0.5)   # respect rate limit
+                time.sleep(0.5)
             except Exception as e:
                 print(f"  page {page} error: {e}")
                 break
@@ -118,7 +115,7 @@ def main():
                 POSTED_AT VARCHAR, QUERY VARCHAR, FETCHED_AT VARCHAR, SOURCE VARCHAR
             )
         """)
-        # Remove today's fetch to avoid dupes on re-run
+        # delete-before-insert so reruns don't stack
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         cur.execute(f"DELETE FROM RAW.ADZUNA_POSTINGS WHERE FETCHED_AT LIKE '{today}%'")
 

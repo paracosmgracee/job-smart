@@ -1,7 +1,5 @@
-"""
-Fetch job postings from JSearch (RapidAPI) — pulls from Indeed + LinkedIn.
-Runs daily via GitHub Actions. Hard limit is 200 req/month so keep PAGES_PER_QUERY low.
-"""
+# JSearch (RapidAPI) → RAW.JSEARCH_POSTINGS
+# 200 req/month hard limit — keep PAGES_PER_QUERY low
 import os, time, requests, pandas as pd, snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
 from cryptography.hazmat.primitives import serialization
@@ -28,7 +26,7 @@ QUERIES = [
     "software engineer data",
 ]
 
-PAGES_PER_QUERY = 3   # 8 queries × 3 pages = 24 req/run, leaves buffer for reruns
+PAGES_PER_QUERY = 3   # 8 × 3 = 24 req/run
 
 
 def fetch_jobs(query: str, page: int) -> list[dict]:

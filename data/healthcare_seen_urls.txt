@@ -4,7 +4,9 @@ https://careers.elevancehealth.com/es-mx/data-engineer-secure-data-pipelines/job
 https://careers.elevancehealth.com/es-mx/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B0386011E281C86E6FBD6C552BCA4__es-mx
+https://careers.elevancehealth.com/es-mx/provider-data-analyst-sr/job/EFADB7325F65AA8277E1F754B4CCEB1C__es-mx
 https://careers.elevancehealth.com/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D
+https://careers.elevancehealth.com/provider-data-analyst-sr/job/EFADB7325F65AA8277E1F754B4CCEB1C
 https://careers.hcahealthcare.com/en/jobs/17714301-consulting-business-intelligence-developer?tm_job=1-INFOR-4531989&tm_event=view&tm_company=2537
 https://careers.hcahealthcare.com/en/jobs/17774455-data-integrity-and-quality-analyst-ii?tm_job=1-INFOR-4543517&tm_event=view&tm_company=2537
 https://careers.hcahealthcare.com/jobs/17129915-medication-management-data-analyst
@@ -16,13 +18,16 @@ https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operatio
 https://careers.unitedhealthgroup.com/job/bengaluru/data-scientist/34088/95535060432
 https://careers.unitedhealthgroup.com/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/job/detroit/sr-data-analyst-hedis-quality-measures/34088/95648974560
+https://careers.unitedhealthgroup.com/job/dublin/data-analyst-healthcare-economic/50688/96292417344
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
+https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/50688/96275801552
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-healthcare-claims-and-remittance-remote/34088/94855104208
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-2/34088/93191508912
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-operational-optimization-and-workforce-strategy/34088/95024674848
 https://careers.unitedhealthgroup.com/job/eden-prairie/financial-data-analyst-remote/34088/95024674704
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/94425248352
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/95648974624
+https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/96191579456
 https://careers.unitedhealthgroup.com/job/gurgaon/data-scientist/34088/95648974656
 https://careers.unitedhealthgroup.com/job/hyderabad/data-analyst-2/34088/95272481136
 https://careers.unitedhealthgroup.com/job/hyderabad/data-scientist/34088/95580204048
@@ -31,6 +36,7 @@ https://careers.unitedhealthgroup.com/job/little-rock/sr-data-analyst-hybrid-in-
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/94236484704
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/94946390208
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/95284594048
+https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove-hybrid-in-mn/34088/95955899024
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove-provider-experience/34088/95043544192
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove/34088/95043544384
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-ii-ifp/34088/94751131184
@@ -69,6 +75,8 @@ https://jobs.centene.com/us/en/jobs/1638373/data-analyst-iii-healthcare-analytic
 https://jobs.centene.com/us/en/jobs/1638556/data-engineer-ii/
 https://jobs.centene.com/us/en/jobs/1639314/business-analyst-ii-claims-amisys/
 https://jobs.centene.com/us/en/jobs/1639327/business-analyst-ii-implementation-support-uat-cm/
+https://jobs.centene.com/us/en/jobs/1641748/social-intelligence-platform-operations-analyst/
 https://usccareers.usc.edu/job/los-angeles/associate-data-scientist/1209/95352374480
 https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976
+https://usccareers.usc.edu/job/los-angeles/research-data-scientist/1209/96242981376
 https://usccareers.usc.edu/job/san-diego/business-data-analyst/1209/93159747552

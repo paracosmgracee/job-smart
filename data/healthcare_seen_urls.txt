@@ -14,6 +14,7 @@ https://careers.hcahealthcare.com/jobs/17707968-division-nursing-clinical-data-a
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
 https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
+https://careers.molinahealthcare.com/job/united-states/data-scientist/21726/96355642944
 https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/job/bengaluru/data-scientist/34088/95535060432
 https://careers.unitedhealthgroup.com/job/dallas/data-analyst-claims-operations/34088/94973583216
@@ -44,6 +45,7 @@ https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove-pro
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove/34088/95043544384
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-ii-ifp/34088/94751131184
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-ii-uhc-cove/34088/95043544432
+https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-ii-uhc-cove/50688/95092904336
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-uhc-cove-strategic-enablement/34088/95108583552
 https://careers.unitedhealthgroup.com/job/minnetonka/data-scientist-remote/34088/91312879440
 https://careers.unitedhealthgroup.com/job/minnetonka/data-scientist/34088/93191508416

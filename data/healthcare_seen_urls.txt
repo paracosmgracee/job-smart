@@ -60,8 +60,10 @@ https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95574159552
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95612494384
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95691240752
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95734117056
+https://careers.unitedhealthgroup.com/job/noida/data-scientist/50688/95612484080
 https://careers.unitedhealthgroup.com/job/pearland/sr-value-based-healthcare-data-analyst-kelsey-seybold-pearland-tx/34088/95338508208
 https://careers.unitedhealthgroup.com/job/plymouth/business-data-analyst-remote/34088/88184223040
+https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/50688/96347066032
 https://it.uclahealth.org/about/ohia
 https://jobs.centene.com/us/en/jobs/1618298/data-analyst-ii-sql-ssrs/
 https://jobs.centene.com/us/en/jobs/1632554/210024-data-analyst-ii/
@@ -73,6 +75,7 @@ https://jobs.centene.com/us/en/jobs/1634956/data-analyst-ii-sql-power-bi-ms-acce
 https://jobs.centene.com/us/en/jobs/1635734/data-engineer-ii/
 https://jobs.centene.com/us/en/jobs/1636010/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1636120/data-analyst-iii-healthcare-analytics/
+https://jobs.centene.com/us/en/jobs/1636195/data-analyst-i-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1636874/data-analyst-iii-healthcare-analytics-provider-analytics/
 https://jobs.centene.com/us/en/jobs/1637986/business-analyst-ii-integration-quality-user-acceptance-testing-ltss/
 https://jobs.centene.com/us/en/jobs/1638135/data-analyst-ii-healthcare-analytics/

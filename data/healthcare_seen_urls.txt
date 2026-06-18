@@ -23,6 +23,7 @@ https://careers.unitedhealthgroup.com/job/dublin/data-analyst-healthcare-economi
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/50688/96275801552
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-healthcare-claims-and-remittance-remote/34088/94855104208
+https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-1/34088/96534675936
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-2/34088/93191508912
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-operational-optimization-and-workforce-strategy/34088/95024674848
 https://careers.unitedhealthgroup.com/job/eden-prairie/financial-data-analyst-remote/34088/95024674704
@@ -34,6 +35,7 @@ https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/96191579456
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/50688/96191640400
 https://careers.unitedhealthgroup.com/job/gurgaon/data-scientist/34088/95648974656
 https://careers.unitedhealthgroup.com/job/hyderabad/data-analyst-2/34088/95272481136
+https://careers.unitedhealthgroup.com/job/hyderabad/data-analyst-2/34088/96577496928
 https://careers.unitedhealthgroup.com/job/hyderabad/data-scientist/34088/95580204048
 https://careers.unitedhealthgroup.com/job/hyderabad/sr-data-analyst/34088/95077360400
 https://careers.unitedhealthgroup.com/job/little-rock/sr-data-analyst-hybrid-in-office-remote/34088/94073988000
@@ -64,6 +66,7 @@ https://careers.unitedhealthgroup.com/job/noida/data-scientist/50688/95612484080
 https://careers.unitedhealthgroup.com/job/pearland/sr-value-based-healthcare-data-analyst-kelsey-seybold-pearland-tx/34088/95338508208
 https://careers.unitedhealthgroup.com/job/plymouth/business-data-analyst-remote/34088/88184223040
 https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/50688/96347066032
+https://careers.unitedhealthgroup.com/job/pune/associate-data-scientist/34088/96545419744
 https://it.uclahealth.org/about/ohia
 https://jobs.centene.com/us/en/jobs/1618298/data-analyst-ii-sql-ssrs/
 https://jobs.centene.com/us/en/jobs/1632554/210024-data-analyst-ii/

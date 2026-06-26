@@ -12,6 +12,7 @@ https://careers.hcahealthcare.com/en/jobs/17774455-data-integrity-and-quality-an
 https://careers.hcahealthcare.com/jobs/17129915-medication-management-data-analyst
 https://careers.hcahealthcare.com/jobs/17707968-division-nursing-clinical-data-analyst
 https://careers.hcahealthcare.com/jobs/17889228-business-analyst-ii
+https://careers.hcahealthcare.com/jobs/17899875-risk-and-intelligence-data-analyst
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
 https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
@@ -26,6 +27,7 @@ https://careers.unitedhealthgroup.com/job/dublin/data-analyst-healthcare-economi
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/50688/96275801552
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-healthcare-claims-and-remittance-remote/34088/94855104208
+https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-remote/34088/94259827232
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-1/34088/96534675936
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-2/34088/93191508912
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-operational-optimization-and-workforce-strategy/34088/95024674848
@@ -95,6 +97,7 @@ https://jobs.centene.com/us/en/jobs/1639314/business-analyst-ii-claims-amisys/
 https://jobs.centene.com/us/en/jobs/1639327/business-analyst-ii-implementation-support-uat-cm/
 https://jobs.centene.com/us/en/jobs/1641748/social-intelligence-platform-operations-analyst/
 https://jobs.centene.com/us/en/jobs/1642364/data-analyst-iii/
+https://jobs.centene.com/us/en/jobs/1642660/data-analyst-ii-healthcare-analytics/
 https://usccareers.usc.edu/job/los-angeles/associate-data-scientist/1209/95352374480
 https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976
 https://usccareers.usc.edu/job/los-angeles/research-data-scientist/1209/96242981376

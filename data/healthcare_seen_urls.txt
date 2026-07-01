@@ -24,6 +24,7 @@ https://careers.unitedhealthgroup.com/job/bengaluru/data-scientist/34088/9553506
 https://careers.unitedhealthgroup.com/job/brentwood/data-analyst-payment-integrity-remote/34088/96868192336
 https://careers.unitedhealthgroup.com/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/job/detroit/sr-data-analyst-hedis-quality-measures/34088/95648974560
+https://careers.unitedhealthgroup.com/job/dublin/data-analyst-2/34088/96913027136
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst-healthcare-economic/50688/96292417344
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/50688/96275801552
@@ -76,11 +77,13 @@ https://careers.unitedhealthgroup.com/job/noida/data-scientist/50688/95612484080
 https://careers.unitedhealthgroup.com/job/pearland/sr-value-based-healthcare-data-analyst-kelsey-seybold-pearland-tx/34088/95338508208
 https://careers.unitedhealthgroup.com/job/plymouth/business-data-analyst-remote/34088/88184223040
 https://careers.unitedhealthgroup.com/job/plymouth/data-analyst-ii-remote/34088/96922566464
+https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/34088/96345598416
 https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/50688/96347066032
 https://careers.unitedhealthgroup.com/job/pune/associate-data-scientist/34088/96545419744
 https://it.uclahealth.org/about/ohia
 https://jobs.centene.com/us/en/jobs/1618298/data-analyst-ii-sql-ssrs/
 https://jobs.centene.com/us/en/jobs/1632554/210024-data-analyst-ii/
+https://jobs.centene.com/us/en/jobs/1633622/business-analyst-ii-data-operations/
 https://jobs.centene.com/us/en/jobs/1633622/business-analyst-ii-provider-data-operations/
 https://jobs.centene.com/us/en/jobs/1634216/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1634221/data-analyst-iv-healthcare-analytics-medical-economics/
@@ -102,6 +105,7 @@ https://jobs.centene.com/us/en/jobs/1641748/social-intelligence-platform-operati
 https://jobs.centene.com/us/en/jobs/1642364/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1642660/data-analyst-ii-healthcare-analytics/
 https://usccareers.usc.edu/job/los-angeles/associate-data-scientist/1209/95352374480
+https://usccareers.usc.edu/job/los-angeles/business-data-analyst/1209/90376682688
 https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976
 https://usccareers.usc.edu/job/los-angeles/research-data-scientist/1209/96242981376
 https://usccareers.usc.edu/job/san-diego/business-data-analyst/1209/93159747552

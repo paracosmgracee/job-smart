@@ -1,6 +1,9 @@
 https://careers.elevancehealth.com/data-engineer-secure-data-pipelines/job/8B9550B8777A615BCE4938DC7DFE6427
+https://careers.elevancehealth.com/data-scientist-us/job/FADE177DB4B27DD2E0E94ED12E9D7FA6
+https://careers.elevancehealth.com/enrollment-data-analyst-ii/job/0FB1C8A7F12F72E941F9617831F85D1D
 https://careers.elevancehealth.com/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487
 https://careers.elevancehealth.com/es-mx/data-engineer-secure-data-pipelines/job/8B9550B8777A615BCE4938DC7DFE6427__es-mx
+https://careers.elevancehealth.com/es-mx/data-scientist-us/job/FADE177DB4B27DD2E0E94ED12E9D7FA6__es-mx
 https://careers.elevancehealth.com/es-mx/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B0386011E281C86E6FBD6C552BCA4__es-mx

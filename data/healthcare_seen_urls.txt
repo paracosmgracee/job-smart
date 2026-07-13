@@ -8,8 +8,10 @@ https://careers.elevancehealth.com/es-mx/enrollment-data-analyst-iii-us/job/2D11
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B0386011E281C86E6FBD6C552BCA4__es-mx
 https://careers.elevancehealth.com/es-mx/provider-data-analyst-sr/job/EFADB7325F65AA8277E1F754B4CCEB1C__es-mx
+https://careers.elevancehealth.com/es-mx/secure-data-pipeline-data-engineer/job/8B9550B8777A615BCE4938DC7DFE6427__es-mx
 https://careers.elevancehealth.com/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D
 https://careers.elevancehealth.com/provider-data-analyst-sr/job/EFADB7325F65AA8277E1F754B4CCEB1C
+https://careers.elevancehealth.com/secure-data-pipeline-data-engineer/job/8B9550B8777A615BCE4938DC7DFE6427
 https://careers.hcahealthcare.com/en/jobs/17714301-consulting-business-intelligence-developer?tm_job=1-INFOR-4531989&tm_event=view&tm_company=2537
 https://careers.hcahealthcare.com/en/jobs/17774455-data-integrity-and-quality-analyst-ii?tm_job=1-INFOR-4543517&tm_event=view&tm_company=2537
 https://careers.hcahealthcare.com/jobs/17129915-medication-management-data-analyst
@@ -115,7 +117,9 @@ https://jobs.centene.com/us/en/jobs/1641748/social-intelligence-platform-operati
 https://jobs.centene.com/us/en/jobs/1642364/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1642660/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1643331/data-analyst-iv-care-management/
+https://jobs.centene.com/us/en/jobs/1643477/data-analyst-ii-python-and-sql/
 https://jobs.centene.com/us/en/jobs/1643520/business-analyst-ii-recovery-platform-operations/
+https://jobs.centene.com/us/en/jobs/1643743/data-analyst-ii-healthcare-analytics/
 https://usccareers.usc.edu/job/los-angeles/associate-data-scientist/1209/95352374480
 https://usccareers.usc.edu/job/los-angeles/business-data-analyst/1209/90376682688
 https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976

@@ -20,6 +20,7 @@ https://careers.hcahealthcare.com/jobs/17707968-division-nursing-clinical-data-a
 https://careers.hcahealthcare.com/jobs/17889228-business-analyst-ii
 https://careers.hcahealthcare.com/jobs/17899875-risk-and-intelligence-data-analyst
 https://careers.hcahealthcare.com/jobs/17933626-analytics-engineer-ii
+https://careers.hcahealthcare.com/jobs/18007984-sr-data-analyst
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
 https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
@@ -120,6 +121,7 @@ https://jobs.centene.com/us/en/jobs/1639314/business-analyst-ii-claims-amisys/
 https://jobs.centene.com/us/en/jobs/1639327/business-analyst-ii-implementation-support-uat-cm/
 https://jobs.centene.com/us/en/jobs/1641748/social-intelligence-platform-operations-analyst/
 https://jobs.centene.com/us/en/jobs/1642364/data-analyst-iii/
+https://jobs.centene.com/us/en/jobs/1642383/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1642660/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1643331/data-analyst-iv-care-management/
 https://jobs.centene.com/us/en/jobs/1643477/data-analyst-ii-python-and-sql/

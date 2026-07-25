@@ -11,6 +11,7 @@ https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B
 https://careers.elevancehealth.com/es-mx/provider-data-analyst-sr/job/EFADB7325F65AA8277E1F754B4CCEB1C__es-mx
 https://careers.elevancehealth.com/es-mx/secure-data-pipeline-data-engineer/job/8B9550B8777A615BCE4938DC7DFE6427__es-mx
 https://careers.elevancehealth.com/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D
+https://careers.elevancehealth.com/population-health-data-analyst/job/10E095106FA9FD8087C082C6CF40988B
 https://careers.elevancehealth.com/provider-data-analyst-sr/job/EFADB7325F65AA8277E1F754B4CCEB1C
 https://careers.elevancehealth.com/secure-data-pipeline-data-engineer/job/8B9550B8777A615BCE4938DC7DFE6427
 https://careers.hcahealthcare.com/en/jobs/17714301-consulting-business-intelligence-developer?tm_job=1-INFOR-4531989&tm_event=view&tm_company=2537
@@ -32,6 +33,7 @@ https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operatio
 https://careers.unitedhealthgroup.com/en/job/minnetonka/data-scientist-remote/34088/95342534368
 https://careers.unitedhealthgroup.com/job/bengaluru/data-scientist/34088/95535060432
 https://careers.unitedhealthgroup.com/job/brentwood/data-analyst-payment-integrity-remote/34088/96868192336
+https://careers.unitedhealthgroup.com/job/chicago/data-analyst-ii-office-of-data-analytics/34088/98226344112
 https://careers.unitedhealthgroup.com/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/job/detroit/sr-data-analyst-hedis-quality-measures/34088/95648974560
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst-2/34088/96913027136
@@ -133,6 +135,7 @@ https://jobs.centene.com/us/en/jobs/1643743/data-analyst-ii-healthcare-analytics
 https://jobs.centene.com/us/en/jobs/1644313/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1644314/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1644922/coding-business-analyst-ii-policy-review/
+https://jobs.centene.com/us/en/jobs/1644925/coding-business-analyst-ii-repository-updates/
 https://usccareers.usc.edu/job/los-angeles/associate-data-scientist/1209/95352374480
 https://usccareers.usc.edu/job/los-angeles/business-data-analyst/1209/90376682688
 https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976

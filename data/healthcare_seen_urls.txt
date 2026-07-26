@@ -29,6 +29,7 @@ https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-con
 https://careers.molinahealthcare.com/job/united-states/data-scientist/21726/96355642944
 https://careers.molinahealthcare.com/job/united-states/sr-data-analyst-enrollment-research-and-data-analytics-remote/21726/97089985184
 https://careers.providence.in/search/?createNewAlert=false&q=Data+engineer
+https://careers.unitedhealthgroup.com/en/job/chicago/data-analyst-ii-office-of-data-analytics/34088/98226344112
 https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/en/job/minnetonka/data-scientist-remote/34088/95342534368
 https://careers.unitedhealthgroup.com/job/bengaluru/data-scientist/34088/95535060432
@@ -141,6 +142,7 @@ https://usccareers.usc.edu/job/los-angeles/business-data-analyst/1209/9037668268
 https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976
 https://usccareers.usc.edu/job/los-angeles/research-data-scientist/1209/96242981376
 https://usccareers.usc.edu/job/san-diego/business-data-analyst/1209/93159747552
+https://www.cedars-sinai.org/content/dam/cedars-sinai/education/documents/medical-students/student-electives/me100-99-clinical-informatics.pdf?prevPageName=cs-org%3Acedars-sinai%3Aeducation%3Amedical-students%3Asenior-electives
 https://www.glassdoor.com/Reviews/Providence-Data-Engineer-Reviews-EI_IE4651.0,10_KO11,24.htm
 https://www.glassdoor.com/Salary/Providence-Data-Engineer-Salaries-E4651_D_KO11,24.htm
 https://www.interviewquery.com/interview-guides/providence-data-engineer

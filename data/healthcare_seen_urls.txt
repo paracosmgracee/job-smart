@@ -32,6 +32,7 @@ https://careers.molinahealthcare.com/job/united-states/data-scientist/21726/9635
 https://careers.molinahealthcare.com/job/united-states/sr-data-analyst-enrollment-research-and-data-analytics-remote/21726/97089985184
 https://careers.providence.in/search/?createNewAlert=false&q=Data+engineer
 https://careers.unitedhealthgroup.com/en/job/chicago/data-analyst-ii-office-of-data-analytics/34088/98226344112
+https://careers.unitedhealthgroup.com/en/job/chicago/data-analyst-remote/34088/98472500944
 https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/en/job/minnetonka/data-scientist-remote/34088/95342534368
 https://careers.unitedhealthgroup.com/job/bengaluru/data-analyst/34088/98447083392
@@ -142,6 +143,7 @@ https://jobs.centene.com/us/en/jobs/1644314/data-analyst-iii-healthcare-analytic
 https://jobs.centene.com/us/en/jobs/1644922/coding-business-analyst-ii-policy-review/
 https://jobs.centene.com/us/en/jobs/1644925/coding-business-analyst-ii-repository-updates/
 https://jobs.centene.com/us/en/jobs/1647120/business-analyst-iv/
+https://jobs.centene.com/us/en/jobs/1647866/provider-network-data-analyst-iii-sql-and-power-bi/
 https://usccareers.usc.edu/job/los-angeles/associate-data-scientist/1209/95352374480
 https://usccareers.usc.edu/job/los-angeles/business-data-analyst/1209/90376682688
 https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976

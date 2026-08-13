@@ -31,6 +31,7 @@ https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-con
 https://careers.molinahealthcare.com/job/united-states/data-scientist/21726/96355642944
 https://careers.molinahealthcare.com/job/united-states/sr-data-analyst-enrollment-research-and-data-analytics-remote/21726/97089985184
 https://careers.providence.in/search/?createNewAlert=false&q=Data+engineer
+https://careers.unitedhealthgroup.com/en/job/brentwood/sr-data-analyst/34088/99098498736
 https://careers.unitedhealthgroup.com/en/job/chicago/data-analyst-ii-office-of-data-analytics/34088/98226344112
 https://careers.unitedhealthgroup.com/en/job/chicago/data-analyst-remote/34088/98472500944
 https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operations/34088/94973583216
@@ -93,6 +94,7 @@ https://careers.unitedhealthgroup.com/job/minnetonka/surest-benefit-data-analyst
 https://careers.unitedhealthgroup.com/job/minnetonka/surest-data-analyst-remote/34088/98068054272
 https://careers.unitedhealthgroup.com/job/new-york/data-analyst-remote/34088/99075378192
 https://careers.unitedhealthgroup.com/job/noida/associate-data-analyst/34088/94681101344
+https://careers.unitedhealthgroup.com/job/noida/associate-data-scientist/34088/99136095984
 https://careers.unitedhealthgroup.com/job/noida/data-analyst-tableau-powerbi-databricks-sql-ai/34088/98772514016
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/94714266112
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95574159424

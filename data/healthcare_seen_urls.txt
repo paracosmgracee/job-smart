@@ -48,6 +48,7 @@ https://careers.unitedhealthgroup.com/job/dublin/data-analyst-2/34088/9691302713
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst-healthcare-economic/50688/96292417344
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/99111973552
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
+https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/99180398544
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/50688/96275801552
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-2373615/34088/97088899712
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-2373621/34088/97088900160
@@ -64,6 +65,7 @@ https://careers.unitedhealthgroup.com/job/eden-prairie/sr-data-scientist-people-
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/94425248352
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/95648974624
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/96191579456
+https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/99188968800
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/50688/96191640400
 https://careers.unitedhealthgroup.com/job/gurgaon/data-scientist/34088/95648974656
 https://careers.unitedhealthgroup.com/job/hyderabad/associate-data-scientist/34088/97936376624
@@ -115,6 +117,7 @@ https://careers.unitedhealthgroup.com/job/plymouth/data-analyst-ii-remote/34088/
 https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/34088/96345598416
 https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/50688/96347066032
 https://careers.unitedhealthgroup.com/job/pune/associate-data-scientist/34088/96545419744
+https://careers.unitedhealthgroup.com/job/san-juan/data-scientist-san-juan-pr/34088/99215937792
 https://dataford.io/interview-guides/providence/data-engineer
 https://findadatajob.com/
 https://it.uclahealth.org/about/ohia

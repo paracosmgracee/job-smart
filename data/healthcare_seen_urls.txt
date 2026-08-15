@@ -62,6 +62,7 @@ https://careers.unitedhealthgroup.com/job/eden-prairie/financial-data-analyst-re
 https://careers.unitedhealthgroup.com/job/eden-prairie/principle-data-scientist-remote/34088/96258187296
 https://careers.unitedhealthgroup.com/job/eden-prairie/sr-data-analyst-optum-financial-remote/34088/97483657072
 https://careers.unitedhealthgroup.com/job/eden-prairie/sr-data-scientist-people-analytics-remote/50688/95858089360
+https://careers.unitedhealthgroup.com/job/eugene/healthcare-data-analyst-ii-remote/34088/99226763120
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/94425248352
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/95648974624
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/96191579456
@@ -165,6 +166,7 @@ https://usccareers.usc.edu/job/los-angeles/associate-data-scientist/1209/9535237
 https://usccareers.usc.edu/job/los-angeles/business-data-analyst/1209/90376682688
 https://usccareers.usc.edu/job/los-angeles/business-data-analyst/1209/99041127520
 https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976
+https://usccareers.usc.edu/job/los-angeles/research-data-engineer/1209/99232013584
 https://usccareers.usc.edu/job/los-angeles/research-data-scientist/1209/96242981376
 https://usccareers.usc.edu/job/san-diego/business-data-analyst/1209/93159747552
 https://www.cedars-sinai.org/content/dam/cedars-sinai/education/documents/medical-students/student-electives/me100-99-clinical-informatics.pdf

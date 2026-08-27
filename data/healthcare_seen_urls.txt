@@ -1,11 +1,13 @@
 https://careers.elevancehealth.com/data-engineer-secure-data-pipelines/job/8B9550B8777A615BCE4938DC7DFE6427
 https://careers.elevancehealth.com/data-scientist-analyst/job/F1031A90FF3802D25E25DD65FC96415C
 https://careers.elevancehealth.com/data-scientist-us/job/FADE177DB4B27DD2E0E94ED12E9D7FA6
+https://careers.elevancehealth.com/data-scientist/job/D8A1AD0D2F01FC472F1222697FAAF4E6
 https://careers.elevancehealth.com/enrollment-data-analyst-ii/job/0FB1C8A7F12F72E941F9617831F85D1D
 https://careers.elevancehealth.com/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487
 https://careers.elevancehealth.com/es-mx/data-engineer-secure-data-pipelines/job/8B9550B8777A615BCE4938DC7DFE6427__es-mx
 https://careers.elevancehealth.com/es-mx/data-scientist-analyst/job/F1031A90FF3802D25E25DD65FC96415C__es-mx
 https://careers.elevancehealth.com/es-mx/data-scientist-us/job/FADE177DB4B27DD2E0E94ED12E9D7FA6__es-mx
+https://careers.elevancehealth.com/es-mx/data-scientist/job/D8A1AD0D2F01FC472F1222697FAAF4E6__es-mx
 https://careers.elevancehealth.com/es-mx/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B0386011E281C86E6FBD6C552BCA4__es-mx
@@ -26,6 +28,7 @@ https://careers.hcahealthcare.com/jobs/17889228-business-analyst-ii
 https://careers.hcahealthcare.com/jobs/17899875-risk-and-intelligence-data-analyst
 https://careers.hcahealthcare.com/jobs/17933626-analytics-engineer-ii
 https://careers.hcahealthcare.com/jobs/18007984-sr-data-analyst
+https://careers.hcahealthcare.com/jobs/18155363-vendor-resource-management-data-analyst
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
 https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
@@ -169,6 +172,7 @@ https://jobs.centene.com/us/en/jobs/1647866/provider-data-analyst-iii-sql-and-po
 https://jobs.centene.com/us/en/jobs/1647866/provider-network-data-analyst-iii-sql-and-power-bi/
 https://jobs.centene.com/us/en/jobs/1647868/data-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-healthcare-analytics/
+https://jobs.centene.com/us/en/jobs/1651706/data-scientist-ii/
 https://jobs.centene.com/us/en/jobs/1653092/business-analyst-ii-claims-coding-triage/
 https://usccareers.usc.edu/job/los-angeles/advancement-transformation-it-data-analyst/1209/99456229792
 https://usccareers.usc.edu/job/los-angeles/associate-data-scientist/1209/95352374480

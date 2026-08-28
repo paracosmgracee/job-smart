@@ -52,6 +52,7 @@ https://careers.unitedhealthgroup.com/job/detroit/sr-data-analyst-hedis-quality-
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst-2/34088/96913027136
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst-healthcare-economic/50688/96292417344
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/99111973552
+https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/99709554080
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/99180398544
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/50688/96275801552
@@ -86,6 +87,7 @@ https://careers.unitedhealthgroup.com/job/little-rock/sr-data-analyst-hybrid-in-
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/94236484704
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/94946390208
 https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/95284594048
+https://careers.unitedhealthgroup.com/job/makati-city/data-analyst/34088/99821103152
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove-hybrid-in-mn/34088/95955899024
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove-hybrid-in-mn/50688/95955927328
 https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-1-uhc-cove-provider-experience/34088/95043544192
@@ -99,6 +101,7 @@ https://careers.unitedhealthgroup.com/job/minnetonka/data-analyst-uhc-cove-strat
 https://careers.unitedhealthgroup.com/job/minnetonka/data-scientist-remote/34088/91312879440
 https://careers.unitedhealthgroup.com/job/minnetonka/data-scientist/34088/93191508416
 https://careers.unitedhealthgroup.com/job/minnetonka/sr-data-scientist-ai-or-ml-engineering-focus-remote/34088/99075378112
+https://careers.unitedhealthgroup.com/job/minnetonka/sr-data-scientist-remote/34088/99727030016
 https://careers.unitedhealthgroup.com/job/minnetonka/surest-benefit-data-analyst/34088/97754475536
 https://careers.unitedhealthgroup.com/job/minnetonka/surest-data-analyst-remote/34088/98068054272
 https://careers.unitedhealthgroup.com/job/new-york/data-analyst-remote/34088/99075378192
@@ -117,6 +120,7 @@ https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95612494384
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95691240752
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95734117056
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/98726908208
+https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/99026954880
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/50688/95612484080
 https://careers.unitedhealthgroup.com/job/pearland/sr-value-based-healthcare-data-analyst-kelsey-seybold-pearland-tx/34088/95338508208
 https://careers.unitedhealthgroup.com/job/plymouth/business-data-analyst-remote/34088/88184223040

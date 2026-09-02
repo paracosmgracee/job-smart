@@ -43,6 +43,7 @@ https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operatio
 https://careers.unitedhealthgroup.com/en/job/minnetonka/data-scientist-remote/34088/95342534368
 https://careers.unitedhealthgroup.com/job/bengaluru/data-analyst/34088/98447083392
 https://careers.unitedhealthgroup.com/job/bengaluru/data-scientist/34088/95535060432
+https://careers.unitedhealthgroup.com/job/brentwood/data-analyst-payment-integrity-remote/34088/100040277856
 https://careers.unitedhealthgroup.com/job/brentwood/data-analyst-payment-integrity-remote/34088/96868192336
 https://careers.unitedhealthgroup.com/job/brentwood/sr-data-analyst/34088/99098498736
 https://careers.unitedhealthgroup.com/job/chicago/data-analyst-ii-office-of-data-analytics/34088/98226344112
@@ -103,6 +104,7 @@ https://careers.unitedhealthgroup.com/job/minnetonka/data-scientist-remote/34088
 https://careers.unitedhealthgroup.com/job/minnetonka/data-scientist/34088/93191508416
 https://careers.unitedhealthgroup.com/job/minnetonka/sr-data-scientist-ai-or-ml-engineering-focus-remote/34088/99075378112
 https://careers.unitedhealthgroup.com/job/minnetonka/sr-data-scientist-remote/34088/99727030016
+https://careers.unitedhealthgroup.com/job/minnetonka/sr-product-data-analyst-medicare-advantage-remote/34088/100051957744
 https://careers.unitedhealthgroup.com/job/minnetonka/surest-benefit-data-analyst/34088/97754475536
 https://careers.unitedhealthgroup.com/job/minnetonka/surest-data-analyst-remote/34088/98068054272
 https://careers.unitedhealthgroup.com/job/new-york/data-analyst-remote/34088/99075378192
@@ -179,6 +181,7 @@ https://jobs.centene.com/us/en/jobs/1647868/data-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1651706/data-scientist-ii/
 https://jobs.centene.com/us/en/jobs/1653092/business-analyst-ii-claims-coding-triage/
+https://jobs.centene.com/us/en/jobs/1653985/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1654462/business-analyst-iv-provider-data/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
@@ -190,6 +193,7 @@ https://usccareers.usc.edu/job/los-angeles/associate-data-scientist/1209/9535237
 https://usccareers.usc.edu/job/los-angeles/business-data-analyst/1209/90376682688
 https://usccareers.usc.edu/job/los-angeles/business-data-analyst/1209/99041127520
 https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-cobi-value-improvement-office-full-time-8-hour-da/1209/94585316976
+https://usccareers.usc.edu/job/los-angeles/clinical-operations-business-intelligence-analyst-value-improvement-office-full-time-8-hour-days-ex/1209/100079910752
 https://usccareers.usc.edu/job/los-angeles/data-analyst-patient-experience-and-capacity-management-usc-care-patient-experience-full-time-8-hou/1209/99684082048
 https://usccareers.usc.edu/job/los-angeles/research-data-engineer/1209/99232013584
 https://usccareers.usc.edu/job/los-angeles/research-data-scientist/1209/96242981376

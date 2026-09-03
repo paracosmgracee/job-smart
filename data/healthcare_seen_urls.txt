@@ -76,6 +76,7 @@ https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/95648974624
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/96191579456
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/34088/99188968800
 https://careers.unitedhealthgroup.com/job/gurgaon/data-analyst/50688/96191640400
+https://careers.unitedhealthgroup.com/job/gurgaon/data-scientist/34088/100102547056
 https://careers.unitedhealthgroup.com/job/gurgaon/data-scientist/34088/95648974656
 https://careers.unitedhealthgroup.com/job/hyderabad/associate-data-analyst-scala-pyspark-azure-cloud-ai/34088/99152125904
 https://careers.unitedhealthgroup.com/job/hyderabad/associate-data-scientist/34088/97936376624
@@ -132,6 +133,7 @@ https://careers.unitedhealthgroup.com/job/plymouth/data-analyst-2-remote/34088/9
 https://careers.unitedhealthgroup.com/job/plymouth/data-analyst-ii-remote/34088/96922566464
 https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/34088/96345598416
 https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/50688/96347066032
+https://careers.unitedhealthgroup.com/job/pune/associate-data-analyst-scala-pyspark-azure-cloud-ai/34088/99152125904
 https://careers.unitedhealthgroup.com/job/pune/associate-data-scientist/34088/96545419744
 https://careers.unitedhealthgroup.com/job/san-juan/associate-data-analyst-remote-in-puerto-rico/34088/99466356416
 https://careers.unitedhealthgroup.com/job/san-juan/data-scientist-san-juan-pr/34088/99215937792

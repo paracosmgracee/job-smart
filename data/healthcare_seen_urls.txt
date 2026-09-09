@@ -188,6 +188,7 @@ https://jobs.centene.com/us/en/jobs/1651706/data-scientist-ii/
 https://jobs.centene.com/us/en/jobs/1653092/business-analyst-ii-claims-coding-triage/
 https://jobs.centene.com/us/en/jobs/1653985/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1654462/business-analyst-iv-provider-data/
+https://jobs.centene.com/us/en/jobs/1655747/business-analyst-iii/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
 https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/

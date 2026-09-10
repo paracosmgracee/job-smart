@@ -34,6 +34,7 @@ https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/217
 https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
 https://careers.molinahealthcare.com/job/united-states/data-scientist-statistics-ml-remote/21726/99402318176
 https://careers.molinahealthcare.com/job/united-states/data-scientist/21726/96355642944
+https://careers.molinahealthcare.com/job/united-states/sr-business-analyst-enrollment-research-and-analytics-remote/21726/100447515616
 https://careers.molinahealthcare.com/job/united-states/sr-data-analyst-enrollment-research-and-data-analytics-remote/21726/97089985184
 https://careers.providence.in/search/?createNewAlert=false&q=Data+engineer
 https://careers.unitedhealthgroup.com/en/job/brentwood/sr-data-analyst/34088/99098498736
@@ -121,6 +122,7 @@ https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95574159424
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95609138304
 https://careers.unitedhealthgroup.com/job/noida/data-scientist-1/34088/94675598192
 https://careers.unitedhealthgroup.com/job/noida/data-scientist-python-azure-cloud/34088/99421356512
+https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/100324839536
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/94832174176
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95574159552
 https://careers.unitedhealthgroup.com/job/noida/data-scientist/34088/95612494384
@@ -185,10 +187,13 @@ https://jobs.centene.com/us/en/jobs/1647866/provider-network-data-analyst-iii-sq
 https://jobs.centene.com/us/en/jobs/1647868/data-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1651706/data-scientist-ii/
+https://jobs.centene.com/us/en/jobs/1651986/business-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1653092/business-analyst-ii-claims-coding-triage/
 https://jobs.centene.com/us/en/jobs/1653985/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1654462/business-analyst-iv-provider-data/
+https://jobs.centene.com/us/en/jobs/1655699/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1655747/business-analyst-iii/
+https://jobs.centene.com/us/en/jobs/1655749/business-analyst-iii-quality-data/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
 https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/

@@ -42,6 +42,7 @@ https://careers.unitedhealthgroup.com/en/job/chicago/data-analyst-ii-office-of-d
 https://careers.unitedhealthgroup.com/en/job/chicago/data-analyst-remote/34088/98472500944
 https://careers.unitedhealthgroup.com/en/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/en/job/minnetonka/data-scientist-remote/34088/95342534368
+https://careers.unitedhealthgroup.com/en/job/noida/data-scientist/34088/100324839536
 https://careers.unitedhealthgroup.com/job/bengaluru/data-analyst/34088/98447083392
 https://careers.unitedhealthgroup.com/job/bengaluru/data-scientist/34088/95535060432
 https://careers.unitedhealthgroup.com/job/brentwood/data-analyst-payment-integrity-remote/34088/100040277856
@@ -53,6 +54,7 @@ https://careers.unitedhealthgroup.com/job/dallas/data-analyst-claims-operations/
 https://careers.unitedhealthgroup.com/job/detroit/sr-data-analyst-hedis-quality-measures/34088/95648974560
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst-2/34088/96913027136
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst-healthcare-economic/50688/96292417344
+https://careers.unitedhealthgroup.com/job/dublin/data-analyst-network-pricing-and-analytics/34088/100488854768
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/99111973552
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/99709554080
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
@@ -67,6 +69,7 @@ https://careers.unitedhealthgroup.com/job/eden-prairie/data-analyst-remote/34088
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-1/34088/96534675936
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-2/34088/93191508912
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-applied-analytics-and-production-solutions-remote/34088/100353869648
+https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-applied-analytics-and-production-solutions-remote/34088/100456706368
 https://careers.unitedhealthgroup.com/job/eden-prairie/data-scientist-operational-optimization-and-workforce-strategy/34088/95024674848
 https://careers.unitedhealthgroup.com/job/eden-prairie/financial-data-analyst-remote/34088/95024674704
 https://careers.unitedhealthgroup.com/job/eden-prairie/principle-data-scientist-remote/34088/96258187296
@@ -186,14 +189,17 @@ https://jobs.centene.com/us/en/jobs/1647866/provider-data-analyst-iii-sql-and-po
 https://jobs.centene.com/us/en/jobs/1647866/provider-network-data-analyst-iii-sql-and-power-bi/
 https://jobs.centene.com/us/en/jobs/1647868/data-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-healthcare-analytics/
+https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-medical-economics/
 https://jobs.centene.com/us/en/jobs/1651706/data-scientist-ii/
 https://jobs.centene.com/us/en/jobs/1651986/business-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1653092/business-analyst-ii-claims-coding-triage/
 https://jobs.centene.com/us/en/jobs/1653985/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1654462/business-analyst-iv-provider-data/
+https://jobs.centene.com/us/en/jobs/1655697/data-analyst-iv-provider-data-management/
 https://jobs.centene.com/us/en/jobs/1655699/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1655747/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1655749/business-analyst-iii-quality-data/
+https://jobs.centene.com/us/en/jobs/1655755/data-analyst-ii-healthcare-analytics/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
 https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/

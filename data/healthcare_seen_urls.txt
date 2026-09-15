@@ -9,6 +9,7 @@ https://careers.elevancehealth.com/es-mx/data-scientist-analyst/job/F1031A90FF38
 https://careers.elevancehealth.com/es-mx/data-scientist-us/job/FADE177DB4B27DD2E0E94ED12E9D7FA6__es-mx
 https://careers.elevancehealth.com/es-mx/data-scientist/job/D8A1AD0D2F01FC472F1222697FAAF4E6__es-mx
 https://careers.elevancehealth.com/es-mx/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487__es-mx
+https://careers.elevancehealth.com/es-mx/information-security-advisor-senior/job/D8A1AD0D2F01FC472F1222697FAAF4E6__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B0386011E281C86E6FBD6C552BCA4__es-mx
 https://careers.elevancehealth.com/es-mx/provider-data-analyst-sr/job/EFADB7325F65AA8277E1F754B4CCEB1C__es-mx
@@ -50,6 +51,7 @@ https://careers.unitedhealthgroup.com/job/brentwood/data-analyst-payment-integri
 https://careers.unitedhealthgroup.com/job/brentwood/sr-data-analyst/34088/99098498736
 https://careers.unitedhealthgroup.com/job/chicago/data-analyst-ii-office-of-data-analytics/34088/98226344112
 https://careers.unitedhealthgroup.com/job/chicago/data-analyst-remote/34088/98472500944
+https://careers.unitedhealthgroup.com/job/cypress/provider-data-analyst/34088/100629316464
 https://careers.unitedhealthgroup.com/job/dallas/data-analyst-claims-operations/34088/94973583216
 https://careers.unitedhealthgroup.com/job/detroit/sr-data-analyst-hedis-quality-measures/34088/95648974560
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst-2/34088/96913027136
@@ -195,6 +197,7 @@ https://jobs.centene.com/us/en/jobs/1651986/business-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1653092/business-analyst-ii-claims-coding-triage/
 https://jobs.centene.com/us/en/jobs/1653985/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1654462/business-analyst-iv-provider-data/
+https://jobs.centene.com/us/en/jobs/1655692/data-analyst-iv/
 https://jobs.centene.com/us/en/jobs/1655697/data-analyst-iv-provider-data-management/
 https://jobs.centene.com/us/en/jobs/1655699/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1655747/business-analyst-iii/

@@ -2,12 +2,14 @@ https://careers.elevancehealth.com/data-engineer-secure-data-pipelines/job/8B955
 https://careers.elevancehealth.com/data-scientist-analyst/job/F1031A90FF3802D25E25DD65FC96415C
 https://careers.elevancehealth.com/data-scientist-us/job/FADE177DB4B27DD2E0E94ED12E9D7FA6
 https://careers.elevancehealth.com/data-scientist/job/D8A1AD0D2F01FC472F1222697FAAF4E6
+https://careers.elevancehealth.com/data-scientist/job/F7D00B3D45A66E3E72F48E0518A5C43A
 https://careers.elevancehealth.com/enrollment-data-analyst-ii/job/0FB1C8A7F12F72E941F9617831F85D1D
 https://careers.elevancehealth.com/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487
 https://careers.elevancehealth.com/es-mx/data-engineer-secure-data-pipelines/job/8B9550B8777A615BCE4938DC7DFE6427__es-mx
 https://careers.elevancehealth.com/es-mx/data-scientist-analyst/job/F1031A90FF3802D25E25DD65FC96415C__es-mx
 https://careers.elevancehealth.com/es-mx/data-scientist-us/job/FADE177DB4B27DD2E0E94ED12E9D7FA6__es-mx
 https://careers.elevancehealth.com/es-mx/data-scientist/job/D8A1AD0D2F01FC472F1222697FAAF4E6__es-mx
+https://careers.elevancehealth.com/es-mx/data-scientist/job/F7D00B3D45A66E3E72F48E0518A5C43A__es-mx
 https://careers.elevancehealth.com/es-mx/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487__es-mx
 https://careers.elevancehealth.com/es-mx/information-security-advisor-senior/job/D8A1AD0D2F01FC472F1222697FAAF4E6__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D__es-mx
@@ -202,6 +204,7 @@ https://jobs.centene.com/us/en/jobs/1653092/business-analyst-ii-claims-coding-tr
 https://jobs.centene.com/us/en/jobs/1653985/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1654462/business-analyst-iv-provider-data/
 https://jobs.centene.com/us/en/jobs/1654469/business-analyst-iii-pharmacy-enrollment-operations/
+https://jobs.centene.com/us/en/jobs/1655665/business-analyst-iv-claims-process-initiatives/
 https://jobs.centene.com/us/en/jobs/1655692/data-analyst-iv/
 https://jobs.centene.com/us/en/jobs/1655697/data-analyst-iv-provider-data-management/
 https://jobs.centene.com/us/en/jobs/1655699/data-analyst-iii/

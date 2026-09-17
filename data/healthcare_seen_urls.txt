@@ -15,6 +15,7 @@ https://careers.elevancehealth.com/es-mx/population-health-data-analyst/job/396B
 https://careers.elevancehealth.com/es-mx/provider-data-analyst-sr/job/EFADB7325F65AA8277E1F754B4CCEB1C__es-mx
 https://careers.elevancehealth.com/es-mx/secure-data-pipeline-data-engineer/job/8B9550B8777A615BCE4938DC7DFE6427__es-mx
 https://careers.elevancehealth.com/health-services-data-analyst/job/AF9B078B2EC9617D2D9C2B9784B4B6A2
+https://careers.elevancehealth.com/information-security-advisor-senior/job/D8A1AD0D2F01FC472F1222697FAAF4E6
 https://careers.elevancehealth.com/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D
 https://careers.elevancehealth.com/population-health-data-analyst/job/10E095106FA9FD8087C082C6CF40988B
 https://careers.elevancehealth.com/population-health-data-analyst/job/F195B491146D1858F4DA80EC9B9A8D01
@@ -145,6 +146,7 @@ https://careers.unitedhealthgroup.com/job/plymouth/data-analyst-2-remote/34088/9
 https://careers.unitedhealthgroup.com/job/plymouth/data-analyst-ii-remote/34088/96922566464
 https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/34088/96345598416
 https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-remote/50688/96347066032
+https://careers.unitedhealthgroup.com/job/plymouth/sr-data-scientist-telecommute/34088/100730961088
 https://careers.unitedhealthgroup.com/job/pune/associate-data-analyst-scala-pyspark-azure-cloud-ai/34088/99152125904
 https://careers.unitedhealthgroup.com/job/pune/associate-data-scientist/34088/96545419744
 https://careers.unitedhealthgroup.com/job/san-juan/associate-data-analyst-remote-in-puerto-rico/34088/99466356416
@@ -199,12 +201,15 @@ https://jobs.centene.com/us/en/jobs/1651986/business-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1653092/business-analyst-ii-claims-coding-triage/
 https://jobs.centene.com/us/en/jobs/1653985/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1654462/business-analyst-iv-provider-data/
+https://jobs.centene.com/us/en/jobs/1654469/business-analyst-iii-pharmacy-enrollment-operations/
 https://jobs.centene.com/us/en/jobs/1655692/data-analyst-iv/
 https://jobs.centene.com/us/en/jobs/1655697/data-analyst-iv-provider-data-management/
 https://jobs.centene.com/us/en/jobs/1655699/data-analyst-iii/
+https://jobs.centene.com/us/en/jobs/1655707/data-scientist-iii/
 https://jobs.centene.com/us/en/jobs/1655747/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1655749/business-analyst-iii-quality-data/
 https://jobs.centene.com/us/en/jobs/1655755/data-analyst-ii-healthcare-analytics/
+https://jobs.centene.com/us/en/jobs/1658423/business-analyst-i/
 https://jobs.centene.com/us/en/jobs/1659023/data-analyst-ii-healthcare-analytics/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603

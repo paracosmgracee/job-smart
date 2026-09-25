@@ -41,6 +41,7 @@ https://careers.molinahealthcare.com/job/united-states/data-scientist/21726/9635
 https://careers.molinahealthcare.com/job/united-states/sr-business-analyst-enrollment-research-and-analytics-remote/21726/100447515616
 https://careers.molinahealthcare.com/job/united-states/sr-data-analyst-enrollment-research-and-data-analytics-remote/21726/97089985184
 https://careers.providence.in/search/?createNewAlert=false&q=Data+engineer
+https://careers.unitedhealthgroup.com/business/custom_fields.vanity/data%20engineer/34088/5
 https://careers.unitedhealthgroup.com/en/job/brentwood/sr-data-analyst/34088/99098498736
 https://careers.unitedhealthgroup.com/en/job/chicago/data-analyst-ii-office-of-data-analytics/34088/98226344112
 https://careers.unitedhealthgroup.com/en/job/chicago/data-analyst-remote/34088/98472500944
@@ -220,6 +221,7 @@ https://jobs.centene.com/us/en/jobs/1655749/business-analyst-iii-quality-data/
 https://jobs.centene.com/us/en/jobs/1655755/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1658423/business-analyst-i/
 https://jobs.centene.com/us/en/jobs/1659023/data-analyst-ii-healthcare-analytics/
+https://jobs.centene.com/us/en/jobs/1659228/contact-center-operations-analyst-i/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
 https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/

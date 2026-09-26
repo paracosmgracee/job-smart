@@ -32,6 +32,8 @@ https://careers.hcahealthcare.com/jobs/17889228-business-analyst-ii
 https://careers.hcahealthcare.com/jobs/17899875-risk-and-intelligence-data-analyst
 https://careers.hcahealthcare.com/jobs/17933626-analytics-engineer-ii
 https://careers.hcahealthcare.com/jobs/18007984-sr-data-analyst
+https://careers.hcahealthcare.com/jobs/18116833
+https://careers.hcahealthcare.com/jobs/18155363
 https://careers.hcahealthcare.com/jobs/18155363-vendor-resource-management-data-analyst
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
@@ -219,6 +221,7 @@ https://jobs.centene.com/us/en/jobs/1655741/business-analyst-iii-encounters-clai
 https://jobs.centene.com/us/en/jobs/1655747/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1655749/business-analyst-iii-quality-data/
 https://jobs.centene.com/us/en/jobs/1655755/data-analyst-ii-healthcare-analytics/
+https://jobs.centene.com/us/en/jobs/1655816/financial-data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1658423/business-analyst-i/
 https://jobs.centene.com/us/en/jobs/1659023/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1659228/contact-center-operations-analyst-i/

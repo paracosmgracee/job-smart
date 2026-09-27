@@ -4,6 +4,7 @@ https://careers.elevancehealth.com/data-scientist-us/job/FADE177DB4B27DD2E0E94ED
 https://careers.elevancehealth.com/data-scientist/job/D8A1AD0D2F01FC472F1222697FAAF4E6
 https://careers.elevancehealth.com/data-scientist/job/F7D00B3D45A66E3E72F48E0518A5C43A
 https://careers.elevancehealth.com/enrollment-data-analyst-ii/job/0FB1C8A7F12F72E941F9617831F85D1D
+https://careers.elevancehealth.com/enrollment-data-analyst-iii-us/job/0DA43FA1D6D5BFEF65599C6035CAE4D9
 https://careers.elevancehealth.com/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487
 https://careers.elevancehealth.com/es-mx/data-engineer-secure-data-pipelines/job/8B9550B8777A615BCE4938DC7DFE6427__es-mx
 https://careers.elevancehealth.com/es-mx/data-scientist-analyst/job/F1031A90FF3802D25E25DD65FC96415C__es-mx
@@ -225,6 +226,7 @@ https://jobs.centene.com/us/en/jobs/1655816/financial-data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1658423/business-analyst-i/
 https://jobs.centene.com/us/en/jobs/1659023/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1659228/contact-center-operations-analyst-i/
+https://jobs.centene.com/us/en/jobs/1662345/data-analyst-iv-sql-power-bi/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
 https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/

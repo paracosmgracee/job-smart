@@ -11,6 +11,7 @@ https://careers.elevancehealth.com/es-mx/data-scientist-analyst/job/F1031A90FF38
 https://careers.elevancehealth.com/es-mx/data-scientist-us/job/FADE177DB4B27DD2E0E94ED12E9D7FA6__es-mx
 https://careers.elevancehealth.com/es-mx/data-scientist/job/D8A1AD0D2F01FC472F1222697FAAF4E6__es-mx
 https://careers.elevancehealth.com/es-mx/data-scientist/job/F7D00B3D45A66E3E72F48E0518A5C43A__es-mx
+https://careers.elevancehealth.com/es-mx/enrollment-data-analyst-iii-us/job/0DA43FA1D6D5BFEF65599C6035CAE4D9__es-mx
 https://careers.elevancehealth.com/es-mx/enrollment-data-analyst-iii-us/job/2D11E9FE5BE406E3D34FD417004D9487__es-mx
 https://careers.elevancehealth.com/es-mx/information-security-advisor-senior/job/D8A1AD0D2F01FC472F1222697FAAF4E6__es-mx
 https://careers.elevancehealth.com/es-mx/population-health-data-analyst-sr/job/15A7101CA77550BF673E8980307DE11D__es-mx
@@ -213,6 +214,7 @@ https://jobs.centene.com/us/en/jobs/1653985/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1654462/business-analyst-iv-provider-data/
 https://jobs.centene.com/us/en/jobs/1654469/business-analyst-iii-pharmacy-enrollment-operations/
 https://jobs.centene.com/us/en/jobs/1655665/business-analyst-iv-claims-process-initiatives/
+https://jobs.centene.com/us/en/jobs/1655688/business-analyst-iii-contact-center-operations/
 https://jobs.centene.com/us/en/jobs/1655692/data-analyst-iv/
 https://jobs.centene.com/us/en/jobs/1655697/data-analyst-iv-provider-data-management/
 https://jobs.centene.com/us/en/jobs/1655699/data-analyst-iii/

@@ -37,6 +37,7 @@ https://careers.hcahealthcare.com/jobs/18007984-sr-data-analyst
 https://careers.hcahealthcare.com/jobs/18116833
 https://careers.hcahealthcare.com/jobs/18155363
 https://careers.hcahealthcare.com/jobs/18155363-vendor-resource-management-data-analyst
+https://careers.hcahealthcare.com/jobs/18288807
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
 https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
@@ -133,6 +134,7 @@ https://careers.unitedhealthgroup.com/job/noida/associate-data-analyst/34088/946
 https://careers.unitedhealthgroup.com/job/noida/associate-data-scientist/34088/99136095984
 https://careers.unitedhealthgroup.com/job/noida/data-analyst-tableau-powerbi-databricks-or-sql-ai/34088/99373677504
 https://careers.unitedhealthgroup.com/job/noida/data-analyst-tableau-powerbi-databricks-sql-ai/34088/98772514016
+https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/101333215952
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/94714266112
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95574159424
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95609138304
@@ -209,6 +211,7 @@ https://jobs.centene.com/us/en/jobs/1648823/1637112-data-analyst-iii-healthcare-
 https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-medical-economics/
 https://jobs.centene.com/us/en/jobs/1651706/data-scientist-ii/
+https://jobs.centene.com/us/en/jobs/1651933/data-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1651986/business-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1653092/business-analyst-ii-claims-coding-triage/
 https://jobs.centene.com/us/en/jobs/1653985/business-analyst-iii/

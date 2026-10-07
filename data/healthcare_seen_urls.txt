@@ -38,6 +38,7 @@ https://careers.hcahealthcare.com/jobs/18116833
 https://careers.hcahealthcare.com/jobs/18155363
 https://careers.hcahealthcare.com/jobs/18155363-vendor-resource-management-data-analyst
 https://careers.hcahealthcare.com/jobs/18288807
+https://careers.hcahealthcare.com/jobs/18305865-consulting-business-analyst
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
 https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
@@ -133,6 +134,7 @@ https://careers.unitedhealthgroup.com/job/minnetonka/surest-data-analyst-remote/
 https://careers.unitedhealthgroup.com/job/new-york/data-analyst-remote/34088/99075378192
 https://careers.unitedhealthgroup.com/job/noida/associate-data-analyst/34088/94681101344
 https://careers.unitedhealthgroup.com/job/noida/associate-data-scientist/34088/99136095984
+https://careers.unitedhealthgroup.com/job/noida/data-analyst-sas/34088/101597531392
 https://careers.unitedhealthgroup.com/job/noida/data-analyst-tableau-powerbi-databricks-or-sql-ai/34088/99373677504
 https://careers.unitedhealthgroup.com/job/noida/data-analyst-tableau-powerbi-databricks-sql-ai/34088/98772514016
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/101333215952
@@ -235,6 +237,8 @@ https://jobs.centene.com/us/en/jobs/1659023/data-analyst-ii-healthcare-analytics
 https://jobs.centene.com/us/en/jobs/1659228/contact-center-operations-analyst-i/
 https://jobs.centene.com/us/en/jobs/1662345/data-analyst-iv-sql-power-bi/
 https://jobs.centene.com/us/en/jobs/1664769/payment-integrity-business-analyst-ii/
+https://jobs.centene.com/us/en/jobs/1665700/business-analyst-ii-provider-data/
+https://jobs.centene.com/us/en/jobs/1665772/business-analyst-ii-business-enterprise-programs/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
 https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/

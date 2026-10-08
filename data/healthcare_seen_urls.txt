@@ -227,11 +227,13 @@ https://jobs.centene.com/us/en/jobs/1655697/data-analyst-iv-provider-data-manage
 https://jobs.centene.com/us/en/jobs/1655699/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1655706/data-analyst-ii-python-r/
 https://jobs.centene.com/us/en/jobs/1655707/data-scientist-iii/
+https://jobs.centene.com/us/en/jobs/1655708/data-scientist-i/
 https://jobs.centene.com/us/en/jobs/1655741/business-analyst-iii-encounters-claims-edi-sql/
 https://jobs.centene.com/us/en/jobs/1655747/business-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1655749/business-analyst-iii-quality-data/
 https://jobs.centene.com/us/en/jobs/1655755/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1655816/financial-data-analyst-iii/
+https://jobs.centene.com/us/en/jobs/1657540/analytics-engineer-iii-aws/
 https://jobs.centene.com/us/en/jobs/1658423/business-analyst-i/
 https://jobs.centene.com/us/en/jobs/1659023/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1659228/contact-center-operations-analyst-i/

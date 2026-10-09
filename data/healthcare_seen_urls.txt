@@ -138,6 +138,7 @@ https://careers.unitedhealthgroup.com/job/noida/data-analyst-sas/34088/101597531
 https://careers.unitedhealthgroup.com/job/noida/data-analyst-tableau-powerbi-databricks-or-sql-ai/34088/99373677504
 https://careers.unitedhealthgroup.com/job/noida/data-analyst-tableau-powerbi-databricks-sql-ai/34088/98772514016
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/101333215952
+https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/101636004320
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/94714266112
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95574159424
 https://careers.unitedhealthgroup.com/job/noida/data-analyst/34088/95609138304
@@ -211,6 +212,7 @@ https://jobs.centene.com/us/en/jobs/1647866/provider-data-analyst-iii-sql-and-po
 https://jobs.centene.com/us/en/jobs/1647866/provider-network-data-analyst-iii-sql-and-power-bi/
 https://jobs.centene.com/us/en/jobs/1647868/data-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1648823/1637112-data-analyst-iii-healthcare-analytics-medical-economics/
+https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-healthcare-analytics-medical-economics/
 https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1648823/data-analyst-iii-medical-economics/
 https://jobs.centene.com/us/en/jobs/1651706/data-scientist-ii/
@@ -238,7 +240,9 @@ https://jobs.centene.com/us/en/jobs/1658423/business-analyst-i/
 https://jobs.centene.com/us/en/jobs/1659023/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1659228/contact-center-operations-analyst-i/
 https://jobs.centene.com/us/en/jobs/1662345/data-analyst-iv-sql-power-bi/
+https://jobs.centene.com/us/en/jobs/1663147/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1664769/payment-integrity-business-analyst-ii/
+https://jobs.centene.com/us/en/jobs/1665506/business-analyst-ii-member-comms/
 https://jobs.centene.com/us/en/jobs/1665700/business-analyst-ii-provider-data/
 https://jobs.centene.com/us/en/jobs/1665772/business-analyst-ii-business-enterprise-programs/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b

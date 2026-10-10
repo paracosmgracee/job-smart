@@ -165,6 +165,7 @@ https://careers.unitedhealthgroup.com/job/plymouth/provider-audit-data-analyst-r
 https://careers.unitedhealthgroup.com/job/plymouth/sr-data-scientist-telecommute/34088/100730961088
 https://careers.unitedhealthgroup.com/job/pune/associate-data-analyst-scala-pyspark-azure-cloud-ai/34088/99152125904
 https://careers.unitedhealthgroup.com/job/pune/associate-data-scientist/34088/96545419744
+https://careers.unitedhealthgroup.com/job/richardson/data-analyst-2-richardson-tx-2394513/34088/101758586592
 https://careers.unitedhealthgroup.com/job/san-juan/associate-data-analyst-remote-in-puerto-rico/34088/99466356416
 https://careers.unitedhealthgroup.com/job/san-juan/data-scientist-san-juan-pr/34088/99215937792
 https://careers.unitedhealthgroup.com/job/san-juan/data-scientist-san-juan-pr/34088/99351718032
@@ -240,11 +241,13 @@ https://jobs.centene.com/us/en/jobs/1658423/business-analyst-i/
 https://jobs.centene.com/us/en/jobs/1659023/data-analyst-ii-healthcare-analytics/
 https://jobs.centene.com/us/en/jobs/1659228/contact-center-operations-analyst-i/
 https://jobs.centene.com/us/en/jobs/1662345/data-analyst-iv-sql-power-bi/
+https://jobs.centene.com/us/en/jobs/1663138/business-analyst-iii-appeals/
 https://jobs.centene.com/us/en/jobs/1663147/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1664769/payment-integrity-business-analyst-ii/
 https://jobs.centene.com/us/en/jobs/1665506/business-analyst-ii-member-comms/
 https://jobs.centene.com/us/en/jobs/1665700/business-analyst-ii-provider-data/
 https://jobs.centene.com/us/en/jobs/1665772/business-analyst-ii-business-enterprise-programs/
+https://jobs.centene.com/us/en/jobs/1667667/data-analyst-i-excel-sql/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
 https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/

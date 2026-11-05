@@ -1,3 +1,4 @@
+https://careers.elevancehealth.com/data-engineer-business-information-developer-consultant-senior/job/B6AFE111591BA7BD6DEB06AA9B2A43BA
 https://careers.elevancehealth.com/data-engineer-secure-data-pipelines/job/8B9550B8777A615BCE4938DC7DFE6427
 https://careers.elevancehealth.com/data-scientist-analyst/job/F1031A90FF3802D25E25DD65FC96415C
 https://careers.elevancehealth.com/data-scientist-us/job/FADE177DB4B27DD2E0E94ED12E9D7FA6
@@ -39,6 +40,7 @@ https://careers.hcahealthcare.com/jobs/18155363
 https://careers.hcahealthcare.com/jobs/18155363-vendor-resource-management-data-analyst
 https://careers.hcahealthcare.com/jobs/18288807
 https://careers.hcahealthcare.com/jobs/18305865-consulting-business-analyst
+https://careers.hcahealthcare.com/jobs/18442414-data-engineer?source=jobfound.org
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
 https://careers.molinahealthcare.com/job/united-states/data-analyst-provider-configuration/21726/94828566960
@@ -71,6 +73,7 @@ https://careers.unitedhealthgroup.com/job/dublin/data-analyst-network-pricing-an
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/101939967776
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/99111973552
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/99709554080
+https://careers.unitedhealthgroup.com/job/eden-prairie/ai-governance-data-scientist-remote/34088/100183402400
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/99180398544
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/50688/96275801552
@@ -174,6 +177,7 @@ https://careers.unitedhealthgroup.com/job/richardson/data-analyst-2-richardson-t
 https://careers.unitedhealthgroup.com/job/san-juan/associate-data-analyst-remote-in-puerto-rico/34088/99466356416
 https://careers.unitedhealthgroup.com/job/san-juan/data-scientist-san-juan-pr/34088/99215937792
 https://careers.unitedhealthgroup.com/job/san-juan/data-scientist-san-juan-pr/34088/99351718032
+https://careers.unitedhealthgroup.com/job/san-juan/sr-data-analyst-san-juan-pr/34088/102512671648
 https://dataford.io/interview-guides/providence/data-engineer
 https://findadatajob.com/
 https://it.uclahealth.org/about/ohia
@@ -253,6 +257,8 @@ https://jobs.centene.com/us/en/jobs/1665506/business-analyst-ii-member-comms/
 https://jobs.centene.com/us/en/jobs/1665700/business-analyst-ii-provider-data/
 https://jobs.centene.com/us/en/jobs/1665772/business-analyst-ii-business-enterprise-programs/
 https://jobs.centene.com/us/en/jobs/1667667/data-analyst-i-excel-sql/
+https://jobs.centene.com/us/en/jobs/1672428/data-analyst-ii-healthcare-analytics-medical-economics/
+https://jobs.centene.com/us/en/jobs/1673151/data-analyst-iii/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
 https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/

@@ -73,6 +73,7 @@ https://careers.unitedhealthgroup.com/job/dublin/data-analyst-network-pricing-an
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/101939967776
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/99111973552
 https://careers.unitedhealthgroup.com/job/dublin/data-analyst/34088/99709554080
+https://careers.unitedhealthgroup.com/job/dublin/principal-data-scientist-affordability-content-and-ideation-aci/34088/102800608624
 https://careers.unitedhealthgroup.com/job/eden-prairie/ai-governance-data-scientist-remote/34088/100183402400
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/94816209248
 https://careers.unitedhealthgroup.com/job/eden-prairie/clinical-data-analyst-remote/34088/99180398544
@@ -257,8 +258,12 @@ https://jobs.centene.com/us/en/jobs/1665506/business-analyst-ii-member-comms/
 https://jobs.centene.com/us/en/jobs/1665700/business-analyst-ii-provider-data/
 https://jobs.centene.com/us/en/jobs/1665772/business-analyst-ii-business-enterprise-programs/
 https://jobs.centene.com/us/en/jobs/1667667/data-analyst-i-excel-sql/
+https://jobs.centene.com/us/en/jobs/1670832/data-analyst-iv-healthcare-analytics-medical-economics/
+https://jobs.centene.com/us/en/jobs/1671382/business-analyst-ii-excel-sql/
 https://jobs.centene.com/us/en/jobs/1672428/data-analyst-ii-healthcare-analytics-medical-economics/
 https://jobs.centene.com/us/en/jobs/1673151/data-analyst-iii/
+https://jobs.centene.com/us/en/jobs/1674186/business-analyst-ii-operational-systems-testing/
+https://jobs.centene.com/us/en/jobs/1674525/data-analyst-ii-provider-analytics/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
 https://towardsdatascience.com/a-day-in-the-life-of-a-data-scientist-in-2026/

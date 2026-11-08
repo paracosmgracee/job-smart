@@ -40,6 +40,7 @@ https://careers.hcahealthcare.com/jobs/18155363
 https://careers.hcahealthcare.com/jobs/18155363-vendor-resource-management-data-analyst
 https://careers.hcahealthcare.com/jobs/18288807
 https://careers.hcahealthcare.com/jobs/18305865-consulting-business-analyst
+https://careers.hcahealthcare.com/jobs/18352431-consulting-business-intelligence-developer
 https://careers.hcahealthcare.com/jobs/18442414-data-engineer?source=jobfound.org
 https://careers.molinahealthcare.com/job/long-beach/reporting-data-analyst-remote-ca/21726/95633853264
 https://careers.molinahealthcare.com/job/united-states/data-analyst-pharmacy/21726/93661357504
@@ -264,6 +265,7 @@ https://jobs.centene.com/us/en/jobs/1671382/business-analyst-ii-excel-sql/
 https://jobs.centene.com/us/en/jobs/1672428/data-analyst-ii-healthcare-analytics-medical-economics/
 https://jobs.centene.com/us/en/jobs/1673151/data-analyst-iii/
 https://jobs.centene.com/us/en/jobs/1674186/business-analyst-ii-operational-systems-testing/
+https://jobs.centene.com/us/en/jobs/1674331/business-analyst-iii-provider-data/
 https://jobs.centene.com/us/en/jobs/1674525/data-analyst-ii-provider-analytics/
 https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603
